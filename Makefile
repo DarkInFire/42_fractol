@@ -6,20 +6,28 @@
 #    By: jrouzier <jrouzier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/02/23 13:02:44 by jrouzier          #+#    #+#              #
-#    Updated: 2016/03/19 17:41:38 by jrouzier         ###   ########.fr        #
+#    Updated: 2016/03/20 17:06:19 by jrouzier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = fractol
-SRC_NAME = main.c
+SRC_NAME = main.c \
+		   fractol.c \
+		   display.c \
+		   error.c \
+		   hooks.c \
+		   exit_fol.c \
+		   putpxl_img.c \
+		   fractal.c \
+		   getcolor.c
 
-LDFLAGS = -Llibft -Lminilibx_macos
-LDLIBS = -lft -lmlx -framework OpenGL -framework AppKit
+LDFLAGS = -Llibft -Lmlx -L/usr/X11R6/lib
+LDLIBS = -lft -lmlx -lX11 -framework OpenGL -framework AppKit
 
 CC = clang
 CFLAG = -Werror -Wall -Wextra
 SRC_PATH = src
-CPPFLAGS = -I./includes -I./libft/includes
+CPPFLAGS = -I./includes -I./libft/includes -I/usr/X11R6/include
 OBJ_PATH = obj
 
 OBJ_NAME = $(SRC_NAME:.c=.o)
@@ -30,7 +38,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	make -C libft/
-	make -C minilibx_macos/
+	make -C mlx/
 	$(CC) $(LDFLAGS) $(LDLIBS) $^ -o $@
 
 $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c
@@ -40,9 +48,12 @@ $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c
 clean:
 	rm -fv $(OBJ)
 	@rmdir $(OBJ_PATH) 2> /dev/null || true
+	make -C mlx/ clean
+	make -C libft/ clean
 
 fclean: clean
 	rm -fv $(NAME)
+	make -C libft/ fclean
 
 re: fclean all
 
