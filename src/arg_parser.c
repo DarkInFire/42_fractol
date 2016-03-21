@@ -1,15 +1,17 @@
 #include "fractol.h"
 #include "libft.h"
 
-static int		get_fractol_id(char *fractal)
+static int		get_fractal_type(t_args *args, char *fractal)
 {
 	if (ft_strcmp(fractal, "julia") == 0)
-		return (1);
+		args->type = 1;
 	else if (ft_strcmp(fractal, "mandelbrot") == 0)
-		return (2);
+		args->type = 2;
 	else if (ft_strcmp(fractal, "douady") == 0)
-		return (3);
-	return (0);
+		args->type = 3;
+	else
+		fol_putusage("Unknow type of fractol.");
+	return (1);
 }
 
 static void		read_arg(char *p, t_args *args)
@@ -18,8 +20,8 @@ static void		read_arg(char *p, t_args *args)
 
 	if (p[0] == '-')
 		throw_error("Parameters are not supported at this moment.");
-	if ((f_id = get_fractol_id(p)) == 0)
-		fol_putusage("Unknow type of fractol.");
+	else
+		get_fractal_type(args, p);
 	fol_add_window_to_list(args);
 }
 
