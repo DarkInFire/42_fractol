@@ -1,5 +1,6 @@
 #include "fractol.h"
 #include "mlx.h"
+#include "libft.h"
 
 void	fol_fill_image(t_args *args)
 {
@@ -11,6 +12,7 @@ void	fol_fill_image(t_args *args)
 	{
 		y = -1;
 		while (++y <= HEIGHT)
-			fol_putpxl_img(args, x, y, fol_getcolor(args, x, y));
+			fol_putpxl_img(args, ft_getpos(x, y, 0),
+				fol_getcolor(args, x, y));
 	}
 }

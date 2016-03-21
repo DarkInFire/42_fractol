@@ -14,12 +14,12 @@
 #include "mlx.h"
 #include "libft.h"
 
-void		fol_putpxl_img(t_args *args, int x, int y, int color)
+void		fol_putpxl_img(t_args *args, t_pos *pos, int color)
 {
 	unsigned int	value;
 
 	value = mlx_get_color_value(args->mlx, color);
-	if (x >= 0 && x < WIDTH && y >= 0 && y < HEIGHT)
-		ft_memcpy(args->idata + (y * args->ilinesize) +
-				(x * (args->ibits / 8)), &value, 3);
+	if (pos->x >= 0 && pos->x < WIDTH && pos->y >= 0 && pos->y < HEIGHT)
+		ft_memcpy(args->idata + (pos->y * args->ilinesize) +
+				(pos->x * (args->ibits / 8)), &value, 3);
 }
