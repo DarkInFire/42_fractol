@@ -60,7 +60,7 @@ int				fol_expose_hook(t_args *args);
 void			fol_reset_display(t_args *args);
 void			fol_putpxl_img(t_args *args, t_pos *pos, int color);
 int				fol_getcolor(t_args *args, t_pos *pos);
-int				fol_get_iteration(t_args *args, int x, int y);
+int				fol_get_iteration(t_args *args, t_pos *pos);
 void			fol_fill_image(t_args *args);
 
 /**

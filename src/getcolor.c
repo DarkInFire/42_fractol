@@ -20,7 +20,7 @@ int		fol_getcolor(t_args *args, t_pos *pos)
 	int		g;
 	int		b;
 
-	i = (double)fol_get_iteration(args, pos->x, pos->y) / args->it;
+	i = (double)fol_get_iteration(args, pos) / args->it;
 	r = (sin(i * M_PI * 2 - M_PI_2) + 1) / 2 * 255;
 	g = (sin(i * M_PI * 4 - M_PI_2) + 1) / 2 * 255;
 	b = (sin(i * M_PI * 8 - M_PI_2) + 1) / 2 * 255;

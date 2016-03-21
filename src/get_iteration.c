@@ -12,7 +12,7 @@
 
 #include "fractol.h"
 
-int		fol_get_iteration(t_args *args, int x, int y)
+int		fol_get_iteration(t_args *args, t_pos *pos)
 {
 	int		i;
 	t_comp	z;
@@ -20,8 +20,8 @@ int		fol_get_iteration(t_args *args, int x, int y)
 	t_comp	tmp;
 
 	i = 0;
-	z.x = (((x + args->x_offset) / args->zoom / WIDTH) * 4 - 2);
-	z.y = (((y + args->y_offset) / args->zoom / HEIGHT) * 4 - 2);
+	z.x = (((pos->x + args->x_offset) / args->zoom / WIDTH) * 4 - 2);
+	z.y = (((pos->y + args->y_offset) / args->zoom / HEIGHT) * 4 - 2);
 	c.x = args->jx;
 	c.y = args->jy;
 	while ((z.x * z.x + z.y * z.y) < 4 && i < args->it)
