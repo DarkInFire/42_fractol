@@ -42,7 +42,8 @@ static t_args	*init_args(char *type)
 	args->zoom = 1;
 	args->x_offset = 0;
 	args->y_offset = 0;
-	args->p = 0;
+	args->it = 42;
+	args->lock_mouse = 0;
 	return (args);
 }
 
@@ -50,10 +51,10 @@ static void		init_hooks(t_args *args)
 {
 	mlx_expose_hook(args->window, fol_expose_hook, args);
 	mlx_key_hook(args->window, fol_key_hook, args);
-	mlx_mouse_hook(args->window, fol_mouse_hook, args);
+	mlx_mouse_hook(args->window, fol_mousebutton_hook, args);
 	if (args->type == 1)
 		mlx_hook(args->window, MotionNotify, PointerMotionMask,
-			fol_julia_mouse, args);
+			fol_mousecursor_hook, args);
 }
 
 int				fractol(char *type)

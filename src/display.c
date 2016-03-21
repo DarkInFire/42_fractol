@@ -24,6 +24,6 @@ void	fol_display(t_args *args)
 	args->img = mlx_new_image(args->mlx, WIDTH, HEIGHT);
 	args->idata = mlx_get_data_addr(args->img, &(args->ibits),
 				&(args->ilinesize), &(args->iendian));
-	fol_fractal(args, Z_MAX);
+	fol_fill_image(args);
 	mlx_put_image_to_window(args->mlx, args->window, args->img, 0, 0);
 }

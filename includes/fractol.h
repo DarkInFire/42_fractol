@@ -14,7 +14,6 @@
 # define FRACTOL_H
 # define HEIGHT 1000
 # define WIDTH 1000
-# define Z_MAX 100
 # define ZOOM 1.1
 
 typedef struct	s_args
@@ -32,7 +31,8 @@ typedef struct	s_args
 	int			y_offset;
 	double		jx;
 	double		jy;
-	int			p;
+	int			it;
+	int			lock_mouse;
 }				t_args;
 
 typedef struct	s_comp
@@ -45,13 +45,14 @@ int				fractol(char *type);
 void			fol_display(t_args *args);
 void			fol_putusage(char *s);
 int				fol_key_hook(int keycode, t_args *args);
-int				fol_mouse_hook(int button, int x, int y, t_args *args);
+int				fol_mousebutton_hook(int button, int x, int y, t_args *args);
+int				fol_mousecursor_hook(int x, int y, t_args *args);
 int				fol_expose_hook(t_args *args);
 void			fol_reset_display(t_args *args);
 void			fol_putpxl_img(t_args *args, int x, int y, int color);
-int				fol_getcolor(int n, int max, int p);
-void			fol_fractal(t_args *args, int itmax);
-int				fol_julia_mouse(int x, int y, t_args *args);
+int				fol_getcolor(t_args *args, int x, int y);
+int				fol_get_iteration(t_args *args, int x, int y);
+void			fol_fill_image(t_args *args);
 void			throw_error(char *s);
 void			exit_fol(t_args *args);
 

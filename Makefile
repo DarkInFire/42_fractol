@@ -6,7 +6,7 @@
 #    By: jrouzier <jrouzier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/02/23 13:02:44 by jrouzier          #+#    #+#              #
-#    Updated: 2016/03/20 17:06:19 by jrouzier         ###   ########.fr        #
+#    Updated: 2016/03/21 11:22:08 by jrouzier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,10 +16,15 @@ SRC_NAME = main.c \
 		   display.c \
 		   error.c \
 		   hooks.c \
+		   mousebutton_hook.c \
 		   exit_fol.c \
 		   putpxl_img.c \
-		   fractal.c \
-		   getcolor.c
+		   getcolor.c \
+		   get_iteration.c \
+		   fill_image.c \
+		   f_douady.c \
+		   f_julia.c \
+		   f_mandelbrot.c
 
 LDFLAGS = -Llibft -Lmlx -L/usr/X11R6/lib
 LDLIBS = -lft -lmlx -lX11 -framework OpenGL -framework AppKit

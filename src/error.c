@@ -6,7 +6,7 @@
 /*   By: jrouzier <jrouzier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/20 17:02:42 by jrouzier          #+#    #+#             */
-/*   Updated: 2016/03/20 17:02:43 by jrouzier         ###   ########.fr       */
+/*   Updated: 2016/03/20 17:19:43 by jrouzier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,9 @@
 void	fol_putusage(char *s)
 {
 	ft_putendl(s);
-	ft_putstr("usage: \t\t\tfractol fractol_type\nAvailable Fractol: \t\
-		julia mandelbrot douady\nArguments are case-sentitive.\n");
+	ft_putstr("usage:             fractol fractol_type\n");
+	ft_putstr("Available Fractol: julia mandelbrot douady\n");
+	ft_putstr("Arguments are case-sentitive.\n");
 	throw_error(0);
 }
 
