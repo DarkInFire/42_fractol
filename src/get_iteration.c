@@ -6,14 +6,14 @@
 /*   By: jrouzier <jrouzier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/20 17:03:04 by jrouzier          #+#    #+#             */
-/*   Updated: 2016/03/20 17:03:05 by jrouzier         ###   ########.fr       */
+/*   Updated: 2016/03/21 14:06:49 by jrouzier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
 
 static int	get_i_from_base_fractal(t_args *args, t_pos *pos)
-{	
+{
 	int		i;
 	t_comp	z;
 	t_comp	c;
@@ -36,7 +36,7 @@ static int	get_i_from_base_fractal(t_args *args, t_pos *pos)
 	return (i);
 }
 
-int		fol_get_iteration(t_args *args, t_pos *pos)
+int			fol_get_iteration(t_args *args, t_pos *pos)
 {
 	if (args->type == 1 || args->type == 2 || args->type == 3)
 		return (get_i_from_base_fractal(args, pos));

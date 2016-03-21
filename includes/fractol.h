@@ -47,42 +47,42 @@ int				fractol(char *type);
 void			fol_display(t_args *args);
 void			fol_putusage(char *s);
 
-/**
- ** Hooks functions
- **/
+/*
+** Hooks functions
+*/
 int				fol_init_hooks(t_args *args);
 int				fol_key_hook(int keycode, t_args *args);
 int				fol_mousebutton_hook(int button, int x, int y, t_args *args);
 int				fol_mousecursor_hook(int x, int y, t_args *args);
 int				fol_expose_hook(t_args *args);
 
-/**
- ** Display functions
- **/
+/*
+** Display functions
+*/
 void			fol_reset_display(t_args *args);
 void			fol_putpxl_img(t_args *args, t_pos *pos, int color);
 int				fol_getcolor(t_args *args, t_pos *pos);
 int				fol_get_iteration(t_args *args, t_pos *pos);
 void			fol_fill_image(t_args *args);
 
-/**
- ** Base Fractals
- ** These functions are used by fol_get_iteration to fill base fractals
- ** parameters
- **/
- int			f_julia(t_args *args, t_pos *pos, t_comp *z, t_comp *x);
- int			f_mandelbrot(t_args *args, t_pos *pos, t_comp *z, t_comp *x);
- int			f_douady(t_args *args, t_pos *pos, t_comp *z, t_comp *x);
+/*
+** Base Fractals
+** These functions are used by fol_get_iteration to fill base fractals
+** parameters
+*/
+int				f_julia(t_args *args, t_pos *pos, t_comp *z, t_comp *x);
+int				f_mandelbrot(t_args *args, t_pos *pos, t_comp *z, t_comp *x);
+int				f_douady(t_args *args, t_pos *pos, t_comp *z, t_comp *x);
 
-/**
- ** Zoom in/out
- **/
- void			fol_zoom_in(t_pos *pos, t_args *args);
- void			fol_zoom_out(t_pos *pos, t_args *args);
+/*
+** Zoom in/out
+*/
+void			fol_zoom_in(t_pos *pos, t_args *args);
+void			fol_zoom_out(t_pos *pos, t_args *args);
 
-/** 
- ** Program management functions
- **/
+/*
+** Program management functions
+*/
 void			throw_error(char *s);
 void			exit_fol(t_args *args);
 
