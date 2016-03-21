@@ -17,9 +17,9 @@ void	fol_zoom_in(t_window *window, t_pos *pos)
 {
 	window->zoom *= ZOOM;
 	window->offset->x = window->offset->x * ZOOM +
-		((WIDTH - (WIDTH / ZOOM)) / 2) * ZOOM +
-		(pos->x - WIDTH / 2) * ZOOM - (pos->x - WIDTH / 2);
+		((window->size->x - (window->size->x / ZOOM)) / 2) * ZOOM +
+		(pos->x - window->size->x / 2) * ZOOM - (pos->x - window->size->x / 2);
 	window->offset->y = window->offset->y * ZOOM +
-		((HEIGHT - (HEIGHT / ZOOM)) / 2) * ZOOM +
-		(pos->y - HEIGHT / 2) * ZOOM - (pos->y - HEIGHT / 2);
+		((window->size->y - (window->size->y / ZOOM)) / 2) * ZOOM +
+		(pos->y - window->size->y / 2) * ZOOM - (pos->y - window->size->y / 2);
 }

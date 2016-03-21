@@ -12,8 +12,6 @@
 
 #ifndef FRACTOL_H
 # define FRACTOL_H
-# define HEIGHT 1000
-# define WIDTH 1000
 # define ZOOM 1.1
 # include "libft.h"
 
@@ -22,10 +20,12 @@ typedef struct		s_window
 	void			*mlx;
 	void			*window;
 	void			*img;
+	int				id;
 	char			*idata;
 	int				ibits;
 	int				ilinesize;
 	int				iendian;
+	t_pos			*size;
 	int				type;
 	float			zoom;
 	t_pos			*offset;
@@ -38,6 +38,8 @@ typedef struct		s_args
 {
 	void			*mlx;
 	t_list			*w_list;
+	int				nb_windows;
+	int 			type;
 }					t_args;
 
 typedef struct		s_comp
@@ -54,7 +56,8 @@ void				fol_putusage(char *s);
 */
 t_args				*fol_arg_parser(int nb_params, char **params);
 t_args				*fol_init_args();
-t_window			*fol_init_window(t_args *args, int type);
+t_window			*fol_init_window(t_args *args);
+int					fol_add_window_to_list(t_args *args);
 
 
 /*

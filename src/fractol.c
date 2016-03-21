@@ -17,7 +17,7 @@
 
 int				fractol(t_args *args)
 {
-	t_list	*tmp;
+	t_list		*tmp;
 	t_window	*window;
 
 	tmp = args->w_list;

@@ -11,5 +11,6 @@ t_args	*fol_init_args()
 	if (!(args->mlx = mlx_init()))
 		throw_error("Unable to initialize mlx.");
 	args->w_list = NULL;
+	args->nb_windows = 0;
 	return (args);
 }

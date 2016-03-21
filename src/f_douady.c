@@ -14,8 +14,10 @@
 
 int		f_douady(t_window *window, t_pos *pos, t_comp *z, t_comp *c)
 {
-	z->x = (((pos->x + window->offset->x) / window->zoom / WIDTH) * 4 - 2);
-	z->y = (((pos->y + window->offset->y) / window->zoom / HEIGHT) * 4 - 2);
+	z->x = (((pos->x + window->offset->x) / window->zoom / window->size->x) *
+		4 - 2);
+	z->y = (((pos->y + window->offset->y) / window->zoom / window->size->y) *
+		4 - 2);
 	c->x = -0.123;
 	c->y = -0.745;
 	return (1);
