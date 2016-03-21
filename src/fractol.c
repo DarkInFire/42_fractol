@@ -14,7 +14,6 @@
 #include "libft.h"
 #include "mlx.h"
 #include <stdlib.h>
-#include <X11/Xlib.h>
 
 static int		get_fractol_id(char *fractal)
 {
@@ -47,22 +46,12 @@ static t_args	*init_args(char *type)
 	return (args);
 }
 
-static void		init_hooks(t_args *args)
-{
-	mlx_expose_hook(args->window, fol_expose_hook, args);
-	mlx_key_hook(args->window, fol_key_hook, args);
-	mlx_mouse_hook(args->window, fol_mousebutton_hook, args);
-	if (args->type == 1)
-		mlx_hook(args->window, MotionNotify, PointerMotionMask,
-			fol_mousecursor_hook, args);
-}
-
 int				fractol(char *type)
 {
 	t_args	*args;
 
 	args = init_args(type);
-	init_hooks(args);
+	fol_init_hooks(args);
 	fol_display(args);
 	mlx_loop(args->mlx);
 	return (1);

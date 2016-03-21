@@ -49,6 +49,7 @@ void			fol_putusage(char *s);
 /**
  ** Hooks functions
  **/
+int				fol_init_hooks(t_args *args);
 int				fol_key_hook(int keycode, t_args *args);
 int				fol_mousebutton_hook(int button, int x, int y, t_args *args);
 int				fol_mousecursor_hook(int x, int y, t_args *args);
@@ -64,8 +65,8 @@ int				fol_get_iteration(t_args *args, t_pos *pos);
 void			fol_fill_image(t_args *args);
 
 /**
- ** Fractals
- ** These functions are used by fol_get_iteration to fill fractals
+ ** Base Fractals
+ ** These functions are used by fol_get_iteration to fill base fractals
  ** parameters
  **/
  int			f_julia(t_args *args, t_pos *pos, t_comp *z, t_comp *x);

@@ -6,7 +6,7 @@
 #    By: jrouzier <jrouzier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/02/23 13:02:44 by jrouzier          #+#    #+#              #
-#    Updated: 2016/03/21 11:22:08 by jrouzier         ###   ########.fr        #
+#    Updated: 2016/03/21 12:12:23 by jrouzier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,6 @@ SRC_NAME = main.c \
 		   fractol.c \
 		   display.c \
 		   error.c \
-		   hooks.c \
 		   exit_fol.c \
 		   putpxl_img.c \
 		   getcolor.c \
@@ -26,6 +25,7 @@ SRC_NAME = main.c \
 		   f_mandelbrot.c \
 		   zoom_in.c \
 		   zoom_out.c \
+		   init_hooks.c \
 		   expose_hook.c \
 		   key_hook.c \
 		   mousebutton_hook.c \
