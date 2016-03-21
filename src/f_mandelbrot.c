@@ -12,10 +12,10 @@
 
 #include "fractol.h"
 
-int		f_mandelbrot(t_args *args, t_pos *pos, t_comp *z, t_comp *c)
+int		f_mandelbrot(t_window *window, t_pos *pos, t_comp *z, t_comp *c)
 {
-	c->x = (((pos->x + args->offset->x) / args->zoom / WIDTH) * 4 - 2);
-	c->y = (((pos->y + args->offset->y) / args->zoom / HEIGHT) * 4 - 2);
+	c->x = (((pos->x + window->offset->x) / window->zoom / WIDTH) * 4 - 2);
+	c->y = (((pos->y + window->offset->y) / window->zoom / HEIGHT) * 4 - 2);
 	z->x = 0.0;
 	z->y = 0.0;
 	return (1);

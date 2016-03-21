@@ -27,22 +27,32 @@ static int		get_fractol_id(char *fractal)
 	return (0);
 }
 
+static t_window	*init_window(t_args *args, char *type)
+{
+	t_window	*window;
+
+	window = (t_window *)malloc(sizeof(t_window));
+	if (!(window->window = mlx_new_window(args->mlx, 1000, 1000,
+		ft_strjoin("fractol by jrouzier. Type:", type))))
+		throw_error("Unable to initate window.\n");
+	window->type = get_fractol_id(type);
+	window->zoom = 1;
+	window->offset = ft_getpos(0, 0, 0);
+	window->it = 42;
+	window->lock_mouse = 0;
+	window->args = args;
+	return (window);
+}
+
 static t_args	*init_args(char *type)
 {
 	t_args	*args;
 
 	args = (t_args *)malloc(sizeof(t_args));
-	args->type = get_fractol_id(type);
+	args->mouse_cursor = ft_getpos(0, 0, 0);
 	if (!(args->mlx = mlx_init()))
 		throw_error("Unable to initialize mlx.\n");
-	if (!(args->window = mlx_new_window(args->mlx, 1000, 1000,
-		ft_strjoin("fractol by jrouzier. Type:", type))))
-		throw_error("Unable to initate window.\n");
-	args->zoom = 1;
-	args->offset = ft_getpos(0, 0, 0);
-	args->it = 42;
-	args->lock_mouse = 0;
-	args->mouse_cursor = ft_getpos(0, 0, 0);
+	args->window = init_window(args, type);
 	return (args);
 }
 
@@ -51,8 +61,8 @@ int				fractol(char *type)
 	t_args	*args;
 
 	args = init_args(type);
-	fol_init_hooks(args);
-	fol_display(args);
+	fol_init_hooks(args->window);
+	fol_display(args->window);
 	mlx_loop(args->mlx);
 	return (1);
 }

@@ -14,7 +14,7 @@
 #include "mlx.h"
 #include "libft.h"
 
-void	fol_fill_image(t_args *args)
+void	fol_fill_image(t_window *window)
 {
 	int x;
 	int y;
@@ -24,7 +24,7 @@ void	fol_fill_image(t_args *args)
 	{
 		y = -1;
 		while (++y <= HEIGHT)
-			fol_putpxl_img(args, ft_getpos(x, y, 0),
-				fol_getcolor(args, ft_getpos(x, y, 0)));
+			fol_putpxl_img(window, ft_getpos(x, y, 0),
+				fol_getcolor(window, ft_getpos(x, y, 0)));
 	}
 }

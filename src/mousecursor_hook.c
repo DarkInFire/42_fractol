@@ -12,13 +12,13 @@
 
 #include "fractol.h"
 
-int		fol_mousecursor_hook(int x, int y, t_args *args)
+int		fol_mousecursor_hook(int x, int y, t_window *window)
 {
-	if (!args->lock_mouse)
+	if (!window->lock_mouse)
 	{
-		ft_setpos(args->mouse_cursor, x, y, 0);
-		if ((x % 5 == 0 || y % 5 == 0) && args->type == 1)
-			fol_reset_display(args);
+		ft_setpos(window->args->mouse_cursor, x, y, 0);
+		if ((x % 5 == 0 || y % 5 == 0) && window->type == 1)
+			fol_reset_display(window);
 	}
 	return (1);
 }

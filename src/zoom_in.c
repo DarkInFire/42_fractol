@@ -13,13 +13,13 @@
 #include "fractol.h"
 #include "libft.h"
 
-void	fol_zoom_in(t_pos *pos, t_args *args)
+void	fol_zoom_in(t_window *window, t_pos *pos)
 {
-	args->zoom *= ZOOM;
-	args->offset->x = args->offset->x * ZOOM +
+	window->zoom *= ZOOM;
+	window->offset->x = window->offset->x * ZOOM +
 		((WIDTH - (WIDTH / ZOOM)) / 2) * ZOOM +
 		(pos->x - WIDTH / 2) * ZOOM - (pos->x - WIDTH / 2);
-	args->offset->y = args->offset->y * ZOOM +
+	window->offset->y = window->offset->y * ZOOM +
 		((HEIGHT - (HEIGHT / ZOOM)) / 2) * ZOOM +
 		(pos->y - HEIGHT / 2) * ZOOM - (pos->y - HEIGHT / 2);
 }

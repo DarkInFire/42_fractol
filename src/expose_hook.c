@@ -12,8 +12,8 @@
 
 #include "fractol.h"
 
-int		fol_expose_hook(t_args *args)
+int		fol_expose_hook(t_window *window)
 {
-	fol_reset_display(args);
+	fol_reset_display(window);
 	return (1);
 }

@@ -12,21 +12,21 @@
 
 #include "fractol.h"
 
-static int	get_i_from_base_fractal(t_args *args, t_pos *pos)
+static int	get_i_from_base_fractal(t_window *window, t_pos *pos)
 {
 	int		i;
 	t_comp	z;
 	t_comp	c;
 	t_comp	tmp;
 
-	if (args->type == 1)
-		f_julia(args, pos, &z, &c);
-	else if (args->type == 2)
-		f_mandelbrot(args, pos, &z, &c);
-	else if (args->type == 3)
-		f_douady(args, pos, &z, &c);
+	if (window->type == 1)
+		f_julia(window, pos, &z, &c);
+	else if (window->type == 2)
+		f_mandelbrot(window, pos, &z, &c);
+	else if (window->type == 3)
+		f_douady(window, pos, &z, &c);
 	i = 0;
-	while ((z.x * z.x + z.y * z.y) < 4 && i < args->it)
+	while ((z.x * z.x + z.y * z.y) < 4 && i < window->it)
 	{
 		tmp = z;
 		z.x = tmp.x * tmp.x - tmp.y * tmp.y + c.x;
@@ -36,9 +36,9 @@ static int	get_i_from_base_fractal(t_args *args, t_pos *pos)
 	return (i);
 }
 
-int			fol_get_iteration(t_args *args, t_pos *pos)
+int			fol_get_iteration(t_window *window, t_pos *pos)
 {
-	if (args->type == 1 || args->type == 2 || args->type == 3)
-		return (get_i_from_base_fractal(args, pos));
+	if (window->type == 1 || window->type == 2 || window->type == 3)
+		return (get_i_from_base_fractal(window, pos));
 	return (0);
 }

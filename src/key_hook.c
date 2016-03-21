@@ -12,24 +12,24 @@
 
 #include "fractol.h"
 
-int		fol_key_hook(int keycode, t_args *args)
+int		fol_key_hook(int keycode, t_window *window)
 {
 	if (keycode == 53)
-		exit_fol(args);
+		exit_fol(window->args);
 	else if (keycode == 78)
-		args->it -= (args->it > 0) ? 1 : 0;
+		window->it -= (window->it > 0) ? 1 : 0;
 	else if (keycode == 69)
-		args->it++;
+		window->it++;
 	else if (keycode == 126)
-		args->offset->x -= (10 * ZOOM);
+		window->offset->x -= (10 * ZOOM);
 	else if (keycode == 125)
-		args->offset->y += (10 * ZOOM);
+		window->offset->y += (10 * ZOOM);
 	else if (keycode == 123)
-		args->offset->x -= (10 * ZOOM);
+		window->offset->x -= (10 * ZOOM);
 	else if (keycode == 124)
-		args->offset->y += (10 * ZOOM);
+		window->offset->y += (10 * ZOOM);
 	else if (keycode == 37)
-		args->lock_mouse = (args->lock_mouse) ? 0 : 1;
-	fol_reset_display(args);
+		window->lock_mouse = (window->lock_mouse) ? 0 : 1;
+	fol_reset_display(window);
 	return (1);
 }
