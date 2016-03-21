@@ -24,7 +24,8 @@ SRC_NAME = main.c \
 		   fill_image.c \
 		   f_douady.c \
 		   f_julia.c \
-		   f_mandelbrot.c
+		   f_mandelbrot.c \
+		   zoom_in.c
 
 LDFLAGS = -Llibft -Lmlx -L/usr/X11R6/lib
 LDLIBS = -lft -lmlx -lX11 -framework OpenGL -framework AppKit
