@@ -113,6 +113,7 @@ void				ft_swapptr(void *a, void *b);
 void				ft_swapint(int *a, int *b);
 void				ft_srttab(int *tab, size_t n);
 t_pos				*ft_getpos(int x, int y, int z);
+void				ft_setpos(t_pos *pos, int x, int y, int z);
 void				ft_lstaddlast(t_list **list, t_list *new);
 int					ft_highsqrt(int n);
 int					ft_lstcount(t_list *list);
