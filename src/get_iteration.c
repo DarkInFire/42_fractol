@@ -12,6 +12,18 @@
 
 #include "fractol.h"
 
+static int	fill_parameters_from_fractal(t_args *args, t_pos *pos,
+	t_comp *z, t_comp *c)
+{
+	if (args->type == 1)
+		f_julia(args, pos, z, c);
+	else if (args->type == 2)
+		f_mandelbrot(args, pos, z, c);
+	else if (args->type == 3)
+		f_douady(args, pos, z, c);
+	return (1);
+}
+
 int		fol_get_iteration(t_args *args, t_pos *pos)
 {
 	int		i;
@@ -20,10 +32,7 @@ int		fol_get_iteration(t_args *args, t_pos *pos)
 	t_comp	tmp;
 
 	i = 0;
-	z.x = (((pos->x + args->x_offset) / args->zoom / WIDTH) * 4 - 2);
-	z.y = (((pos->y + args->y_offset) / args->zoom / HEIGHT) * 4 - 2);
-	c.x = args->jx;
-	c.y = args->jy;
+	fill_parameters_from_fractal(args, pos, &z, &c);
 	while ((z.x * z.x + z.y * z.y) < 4 && i < args->it)
 	{
 		tmp = z;
