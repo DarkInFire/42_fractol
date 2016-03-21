@@ -134,5 +134,6 @@ void				ft_lstaddnlast(t_list **list, void const *content,
 						size_t content_size);
 int					ft_abs(int v);
 void				ft_printtab(int **tab, size_t h, size_t w);
+int					ft_strisdigit(char *s);
 
 #endif
