@@ -17,8 +17,8 @@ int		fol_mousecursor_hook(int x, int y, t_args *args)
 	if (!args->lock_mouse)
 	{
 		ft_setpos(args->mouse_cursor, x, y, 0);
-			if ((x % 5 == 0 || y % 5 == 0) && args-> type == 1)
-				fol_reset_display(args);
+		if ((x % 5 == 0 || y % 5 == 0) && args->type == 1)
+			fol_reset_display(args);
 	}
 	return (1);
 }
