@@ -1,11 +1,9 @@
 #include "fractol.h"
+#include "libft.h"
 
 int		fol_add_window_to_list(t_args *args)
 {
-	t_window	*window;
-
-	window = fol_init_window(args);
-	window->type = args->type;
-	ft_lstaddnlast(&(args->w_list), (void *)window, sizeof(t_window));
+	ft_lstaddnlast(&(args->w_list), (void *)args->tmp_window,
+		sizeof(t_window));
 	return (1);
 }

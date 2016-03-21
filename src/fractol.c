@@ -24,6 +24,10 @@ int				fractol(t_args *args)
 	while (tmp)
 	{
 		window = (t_window *)tmp->content;
+		window->mlx = args->mlx;
+		if (!(window->window = mlx_new_window(window->mlx, window->size->x,
+			window->size->y, "fractol")))
+			throw_error("Unable to initialize mlx.");
 		fol_init_hooks(window);
 		fol_display(window);
 		tmp = tmp->next;
