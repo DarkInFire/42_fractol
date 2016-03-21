@@ -16,12 +16,10 @@
 
 void		fol_putpxl_img(t_args *args, int x, int y, int color)
 {
-	char			*data;
 	unsigned int	value;
 
-	data = args->idata;
 	value = mlx_get_color_value(args->mlx, color);
 	if (x >= 0 && x < WIDTH && y >= 0 && y < HEIGHT)
-		ft_memcpy(data + (y * args->ilinesize) +
+		ft_memcpy(args->idata + (y * args->ilinesize) +
 				(x * (args->ibits / 8)), &value, 3);
 }
