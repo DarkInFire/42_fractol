@@ -22,4 +22,3 @@ static int	f_douady(t_args *args, int x, int y)
 	}
 	return (i);
 }
-
