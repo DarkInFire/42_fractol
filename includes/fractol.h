@@ -20,7 +20,7 @@ typedef struct		s_window
 	void			*mlx;
 	void			*window;
 	void			*img;
-	int				id;
+	void			*args;
 	char			*idata;
 	int				ibits;
 	int				ilinesize;
@@ -38,7 +38,6 @@ typedef struct		s_args
 {
 	void			*mlx;
 	t_list			*w_list;
-	int				nb_windows;
 	int 			type;
 }					t_args;
 

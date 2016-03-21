@@ -28,7 +28,6 @@ int				fractol(t_args *args)
 		fol_display(window);
 		tmp = tmp->next;
 	}
-	while (args->nb_windows)
-		mlx_loop(args->mlx);
+	mlx_loop(args->mlx);
 	return (1);
 }

@@ -18,5 +18,6 @@ t_window	*fol_init_window(t_args *args)
 	window->offset = ft_getpos(0, 0, 0);
 	window->it = 42;
 	window->lock_mouse = 0;
+	window->args = (void *)args;
 	return (window);
 }

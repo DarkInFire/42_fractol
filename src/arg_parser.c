@@ -16,7 +16,7 @@ static int		get_fractal_type(t_args *args, char *fractal)
 
 static void		read_arg(char *p, t_args *args)
 {
-	int		f_id;
+	int			f_id;
 
 	if (p[0] == '-')
 		throw_error("Parameters are not supported at this moment.");

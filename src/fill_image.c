@@ -20,10 +20,10 @@ void	fol_fill_image(t_window *window)
 	int y;
 
 	x = -1;
-	while (++x <= WIDTH)
+	while (++x <= window->size->x)
 	{
 		y = -1;
-		while (++y <= HEIGHT)
+		while (++y <= window->size->y)
 			fol_putpxl_img(window, ft_getpos(x, y, 0),
 				fol_getcolor(window, ft_getpos(x, y, 0)));
 	}
