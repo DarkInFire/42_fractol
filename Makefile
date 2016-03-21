@@ -16,7 +16,6 @@ SRC_NAME = main.c \
 		   display.c \
 		   error.c \
 		   hooks.c \
-		   mousebutton_hook.c \
 		   exit_fol.c \
 		   putpxl_img.c \
 		   getcolor.c \
@@ -28,7 +27,9 @@ SRC_NAME = main.c \
 		   zoom_in.c \
 		   zoom_out.c \
 		   expose_hook.c \
-		   key_hook.c
+		   key_hook.c \
+		   mousebutton_hook.c \
+		   mousecursor_hook.c
 
 LDFLAGS = -Llibft -Lmlx -L/usr/X11R6/lib
 LDLIBS = -lft -lmlx -lX11 -framework OpenGL -framework AppKit
