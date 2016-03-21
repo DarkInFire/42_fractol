@@ -19,8 +19,6 @@ static int	fill_parameters_from_fractal(t_args *args, t_pos *pos,
 		f_julia(args, pos, z, c);
 	else if (args->type == 2)
 		f_mandelbrot(args, pos, z, c);
-	else if (args->type == 3)
-		f_douady(args, pos, z, c);
 	return (1);
 }
 
