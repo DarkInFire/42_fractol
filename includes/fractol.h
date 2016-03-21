@@ -32,6 +32,7 @@ typedef struct	s_args
 	int			y_offset;
 	double		jx;
 	double		jy;
+	t_pos		*mouse_cursor;
 	int			it;
 	int			lock_mouse;
 }				t_args;

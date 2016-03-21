@@ -25,7 +25,7 @@ static int	get_i_from_base_fractal(t_args *args, t_pos *pos)
 		f_mandelbrot(args, pos, &z, &c);
 	else if (args->type == 3)
 		f_douady(args, pos, &z, &c);
-		i = 0;
+	i = 0;
 	while ((z.x * z.x + z.y * z.y) < 4 && i < args->it)
 	{
 		tmp = z;

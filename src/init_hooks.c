@@ -1,4 +1,5 @@
 #include "fractol.h"
+#include "mlx.h"
 #include <X11/Xlib.h>
 
 int		fol_init_hooks(t_args *args)

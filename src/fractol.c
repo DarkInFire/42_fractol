@@ -43,6 +43,7 @@ static t_args	*init_args(char *type)
 	args->y_offset = 0;
 	args->it = 42;
 	args->lock_mouse = 0;
+	args->mouse_cursor = ft_getpos(0, 0, 0);
 	return (args);
 }
 
