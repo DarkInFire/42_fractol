@@ -64,6 +64,15 @@ int				fol_get_iteration(t_args *args, t_pos *pos);
 void			fol_fill_image(t_args *args);
 
 /**
+ ** Fractals
+ ** These functions are used by fol_get_iteration to fill fractals
+ ** parameters
+ **/
+ int			f_julia(t_args *args, t_pos *pos, t_comp *z, t_comp *x);
+ int			f_mandelbrot(t_args *args, t_pos *pos, t_comp *z, t_comp *x);
+ int			f_douady(t_args *args, t_pos *pos, t_comp *z, t_comp *x);
+
+/**
  ** Zoom in/out
  **/
  void			fol_zoom_in(t_pos *pos, t_args *args);
