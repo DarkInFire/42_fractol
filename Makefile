@@ -29,7 +29,10 @@ SRC_NAME = main.c \
 		   expose_hook.c \
 		   key_hook.c \
 		   mousebutton_hook.c \
-		   mousecursor_hook.c
+		   mousecursor_hook.c \
+		   arg_parser.c \
+		   init_args.c \
+		   init_window.c
 
 LDFLAGS = -Llibft -Lmlx -L/usr/X11R6/lib
 LDLIBS = -lft -lmlx -lX11 -framework OpenGL -framework AppKit

@@ -15,7 +15,7 @@
 int		fol_key_hook(int keycode, t_window *window)
 {
 	if (keycode == 53)
-		exit_fol(window->args);
+		exit_fol(window->mlx);
 	else if (keycode == 78)
 		window->it -= (window->it > 0) ? 1 : 0;
 	else if (keycode == 69)

@@ -19,7 +19,7 @@
 
 typedef struct		s_window
 {
-	struct s_args	*args;
+	void			*mlx;
 	void			*window;
 	void			*img;
 	char			*idata;
@@ -29,6 +29,7 @@ typedef struct		s_window
 	int				type;
 	float			zoom;
 	t_pos			*offset;
+	t_pos			*mouse_cursor;
 	int				it;
 	int				lock_mouse;
 }					t_window;
@@ -36,8 +37,7 @@ typedef struct		s_window
 typedef struct		s_args
 {
 	void			*mlx;
-	t_pos			*mouse_cursor;
-	t_window		*window;
+	t_list			*w_list;
 }					t_args;
 
 typedef struct		s_comp
@@ -46,9 +46,16 @@ typedef struct		s_comp
 	float			y;
 }					t_comp;
 
-int					fractol(char *type);
-void				fol_display(t_window *window);
+int					fractol(t_args *args);
 void				fol_putusage(char *s);
+
+/*
+** Argument parsing and widow initialization
+*/
+t_args				*fol_arg_parser(int nb_params, char **params);
+t_args				*fol_init_args();
+t_window			*fol_init_window(t_args *args, int type);
+
 
 /*
 ** Hooks functions
@@ -63,6 +70,7 @@ int					fol_expose_hook(t_window *window);
 /*
 ** Display functions
 */
+void				fol_display(t_window *window);
 void				fol_reset_display(t_window *window);
 void				fol_putpxl_img(t_window *window, t_pos *pos, int color);
 int					fol_getcolor(t_window *window, t_pos *pos);

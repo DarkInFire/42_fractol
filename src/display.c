@@ -15,15 +15,16 @@
 
 void	fol_reset_display(t_window *window)
 {
-	mlx_destroy_image(window->args->mlx, window->img);
+	mlx_destroy_image(window->mlx, window->img);
 	fol_display(window);
 }
 
 void	fol_display(t_window *window)
 {
-	window->img = mlx_new_image(window->args->mlx, WIDTH, HEIGHT);
+	window->img = mlx_new_image(window->mlx, WIDTH, HEIGHT);
 	window->idata = mlx_get_data_addr(window->img, &(window->ibits),
 				&(window->ilinesize), &(window->iendian));
 	fol_fill_image(window);
-	mlx_put_image_to_window(window->args->mlx, window->window, window->img, 0, 0);
+	mlx_put_image_to_window(window->mlx, window->window, window->img,
+		0, 0);
 }

@@ -14,6 +14,7 @@
 
 int		fol_expose_hook(t_window *window)
 {
-	fol_reset_display(window);
+	if (!(window->lock_mouse && window->type == 1))
+		fol_reset_display(window);
 	return (1);
 }

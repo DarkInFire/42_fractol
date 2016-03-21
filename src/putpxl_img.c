@@ -18,7 +18,7 @@ void		fol_putpxl_img(t_window *window, t_pos *pos, int color)
 {
 	unsigned int	value;
 
-	value = mlx_get_color_value(window->args->mlx, color);
+	value = mlx_get_color_value(window->mlx, color);
 	if (pos->x >= 0 && pos->x < WIDTH && pos->y >= 0 && pos->y < HEIGHT)
 		ft_memcpy(window->idata + (pos->y * window->ilinesize) +
 				(pos->x * (window->ibits / 8)), &value, 3);

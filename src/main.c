@@ -14,11 +14,9 @@
 
 int		main(int argc, char **argv)
 {
-	int		result;
+	t_args	*args;
 
-	if (argc != 2)
-		fol_putusage("Fractol take 1 argument.");
-	else
-		fractol(argv[1]);
+	args = fol_arg_parser(argc - 1, argv);
+	fractol(args);
 	return (0);
 }
