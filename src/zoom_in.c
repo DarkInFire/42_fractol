@@ -16,10 +16,10 @@
 void	fol_zoom_in(t_pos *pos, t_args *args)
 {
 	args->zoom *= ZOOM;
-	args->x_offset = args->x_offset * ZOOM +
+	args->offset->x = args->offset->x * ZOOM +
 		((WIDTH - (WIDTH / ZOOM)) / 2) * ZOOM +
 		(pos->x - WIDTH / 2) * ZOOM - (pos->x - WIDTH / 2);
-	args->y_offset = args->y_offset * ZOOM +
+	args->offset->y = args->offset->y * ZOOM +
 		((HEIGHT - (HEIGHT / ZOOM)) / 2) * ZOOM +
 		(pos->y - HEIGHT / 2) * ZOOM - (pos->y - HEIGHT / 2);
 }

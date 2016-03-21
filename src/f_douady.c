@@ -14,8 +14,8 @@
 
 int		f_douady(t_args *args, t_pos *pos, t_comp *z, t_comp *c)
 {
-	z->x = (((pos->x + args->x_offset) / args->zoom / WIDTH) * 4 - 2);
-	z->y = (((pos->y + args->y_offset) / args->zoom / HEIGHT) * 4 - 2);
+	z->x = (((pos->x + args->offset->x) / args->zoom / WIDTH) * 4 - 2);
+	z->y = (((pos->y + args->offset->y) / args->zoom / HEIGHT) * 4 - 2);
 	c->x = -0.123;
 	c->y = -0.745;
 	return (1);

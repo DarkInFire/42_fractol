@@ -39,8 +39,7 @@ static t_args	*init_args(char *type)
 		ft_strjoin("fractol by jrouzier. Type:", type))))
 		throw_error("Unable to initate window.\n");
 	args->zoom = 1;
-	args->x_offset = 0;
-	args->y_offset = 0;
+	args->offset = ft_getpos(0, 0, 0);
 	args->it = 42;
 	args->lock_mouse = 0;
 	args->mouse_cursor = ft_getpos(0, 0, 0);
