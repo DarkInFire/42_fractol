@@ -34,15 +34,8 @@ int		fol_key_hook(int keycode, t_args *args)
 	return (1);
 }
 
-int		fol_expose_hook(t_args *args)
-{
-	fol_reset_display(args);
-	return (1);
-}
-
 int		fol_mousecursor_hook(int x, int y, t_args *args)
 {
-
 	if (!args->lock_mouse)
 	{
 		args->jx = ((double)x / (double)WIDTH) * 2.0 - 1.0;

@@ -26,7 +26,8 @@ SRC_NAME = main.c \
 		   f_julia.c \
 		   f_mandelbrot.c \
 		   zoom_in.c \
-		   zoom_out.c 
+		   zoom_out.c \
+		   expose_hook.c
 
 LDFLAGS = -Llibft -Lmlx -L/usr/X11R6/lib
 LDLIBS = -lft -lmlx -lX11 -framework OpenGL -framework AppKit
