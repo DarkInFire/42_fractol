@@ -12,6 +12,21 @@
 
 #include "fractol.h"
 
+static int	key_color(int keycode, t_window *window)
+{
+	if (keycode == COLOR1)
+		window->color = 1;
+	else if (keycode == COLOR2)
+		window->color = 2;
+	else if (keycode == COLOR3)
+		window->color = 3;
+	else if (keycode == COLOR4)
+		window->color = 4;
+	else if (keycode == COLOR5)
+		window->color = 5;
+	return (1);
+}
+
 int		fol_key_hook(int keycode, t_window *window)
 {
 	if (keycode == 53)
@@ -30,6 +45,7 @@ int		fol_key_hook(int keycode, t_window *window)
 		window->offset->x -= (10 * ZOOM);
 	else if (keycode == 37)
 		window->lock_mouse = (window->lock_mouse) ? 0 : 1;
+	key_color(keycode, window);
 	fol_reset_display(window);
 	return (1);
 }

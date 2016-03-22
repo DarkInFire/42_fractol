@@ -15,6 +15,15 @@
 # define ZOOM 1.1
 # include "libft.h"
 
+/*
+** Keys to change color
+*/
+# define COLOR1 83
+# define COLOR2 84
+# define COLOR3 85
+# define COLOR4 86
+# define COLOR5 87
+
 typedef struct		s_window
 {
 	void			*mlx;
@@ -34,6 +43,7 @@ typedef struct		s_window
 	int				lock_mouse;
 	int				show_menu;
 	int				tech_menu;
+	int				color;
 }					t_window;
 
 typedef struct		s_args

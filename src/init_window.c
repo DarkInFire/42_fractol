@@ -28,5 +28,6 @@ t_window	*fol_init_window(t_args *args)
 	window->args = (void *)args;
 	window->show_menu = 1;
 	window->tech_menu = 0;
+	window->color = 1;
 	return (window);
 }

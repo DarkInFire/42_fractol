@@ -28,4 +28,5 @@ void	fol_display(t_window *window)
 	fol_fill_image(window);
 	mlx_put_image_to_window(window->mlx, window->window, window->img,
 		0, 0);
+	printf("window color img: %d\n", window->color);
 }
