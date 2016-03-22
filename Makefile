@@ -6,7 +6,7 @@
 #    By: jrouzier <jrouzier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/02/23 13:02:44 by jrouzier          #+#    #+#              #
-#    Updated: 2016/03/21 12:12:23 by jrouzier         ###   ########.fr        #
+#    Updated: 2016/03/22 11:21:50 by jrouzier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,5 +78,6 @@ fclean: clean
 re: fclean all
 
 norme:
+	make -C libft/ norme
 	norminette $(SRC)
 	norminette includes/*.h
