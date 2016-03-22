@@ -18,9 +18,9 @@ int		f_julia(t_window *window, t_pos *pos, t_comp *z, t_comp *c)
 		4 - 2);
 	z->y = (((pos->y + window->offset->y) / window->zoom / window->size->y) *
 		4 - 2);
-	c->x = ((double)window->mouse_cursor->x / (double)window->size->x) *
+	c->x = ((float)window->mouse_cursor->x / (float)window->size->x) *
 		2.0 - 1.0;
-	c->y = ((double)window->mouse_cursor->y / (double)window->size->y) *
+	c->y = ((float)window->mouse_cursor->y / (float)window->size->y) *
 		2.0 - 1.0;
 	return (1);
 }

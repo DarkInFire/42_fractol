@@ -102,6 +102,7 @@ int					f_mandelbrot(t_window *window, t_pos *pos, t_comp *z,
 	t_comp *x);
 int					f_douady(t_window *window, t_pos *pos, t_comp *z,
 	t_comp *x);
+int					f_sierpinski(t_window *window, t_pos *pos);
 
 /*
 ** Zoom in/out

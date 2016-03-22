@@ -40,5 +40,7 @@ int			fol_get_iteration(t_window *window, t_pos *pos)
 {
 	if (window->type == 1 || window->type == 2 || window->type == 3)
 		return (get_i_from_base_fractal(window, pos));
+	else if (window->type == 4)
+		return (f_sierpinski(window, pos));
 	return (0);
 }

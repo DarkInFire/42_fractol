@@ -16,15 +16,20 @@
 
 void	fol_fill_image(t_window *window)
 {
-	int x;
-	int y;
+	int 	x;
+	int 	y;
+	t_pos	*pos;
 
 	x = -1;
+	pos = ft_getpos(0, 0, 0);
 	while (++x <= window->size->x)
 	{
 		y = -1;
 		while (++y <= window->size->y)
-			fol_putpxl_img(window, ft_getpos(x, y, 0),
-				fol_getcolor(window, ft_getpos(x, y, 0)));
+		{
+			ft_setpos(pos, x, y, 0);
+			fol_putpxl_img(window, pos, fol_getcolor(window, pos));
+		}
 	}
+	free(pos);
 }
