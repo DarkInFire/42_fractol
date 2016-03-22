@@ -24,6 +24,23 @@ FRACTALS
 	julia
 	mandelbrot
 	douady
+	sierpinski_carpet
+
+FRACTAL NAVIGATION
+	You can use the mouse and the keyboard to navigate inside the view.
+
+	KEYBOARD
+	UP		Move the view up.
+	DOWN		Move the view down.
+	RIGHT		Move the view to the right.
+	LEFT		Move the view to the left.
+
+	1 to 5		Change color set.
+	L		Lock Julia parameter.
+
+	MOUSE
+	Cursor position	Change parameter in Julia set.
+	Wheel		Zoom in or zoom out.
 
 OPTIONS
 	-wh		Set window height for the next fractal.
