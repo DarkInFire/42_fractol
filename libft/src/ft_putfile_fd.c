@@ -21,7 +21,7 @@ int		ft_putfile_fd(int fdo, int fdi)
 
 	c_write = 0;
 	while ((gnl_ret = ft_gnl(fdi, &s)) > 0)
-		if ((write_ret = write(fdo, &s, GNL_BUFFER)) < 0)
+		if ((write_ret = write(fdo, s, GNL_BUFFER)) < 0)
 			c_write += write_ret;
 	if (write_ret < 0 || gnl_ret < 0)
 		return (-1);
