@@ -6,7 +6,7 @@
 /*   By: jrouzier <jrouzier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/19 20:30:49 by jrouzier          #+#    #+#             */
-/*   Updated: 2016/03/20 17:03:37 by jrouzier         ###   ########.fr       */
+/*   Updated: 2016/03/22 11:17:14 by jrouzier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ typedef struct		s_args
 {
 	void			*mlx;
 	t_list			*w_list;
-	int 			pwait;
+	int				pwait;
 	t_window		*tmp_window;
 }					t_args;
 
@@ -56,7 +56,7 @@ int					fol_show_help(t_args *args);
 ** Argument parsing and widow initialization
 */
 t_args				*fol_arg_parser(int nb_params, char **params);
-int 				fol_read_argument(char *a, t_args *args);
+int					fol_read_argument(char *a, t_args *args);
 t_args				*fol_init_args();
 t_window			*fol_init_window(t_args *args);
 int					fol_add_window_to_list(t_args *args);

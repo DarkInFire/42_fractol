@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   arg_parser.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jrouzier <jrouzier@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/03/22 11:19:29 by jrouzier          #+#    #+#             */
+/*   Updated: 2016/03/22 11:21:07 by jrouzier         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "fractol.h"
 #include "libft.h"
 #include "mlx.h"
@@ -25,7 +37,7 @@ static void		read_arg(char *p, t_args *args)
 		args->pwait = fol_read_argument(p + 1, args);
 	else if (args->pwait)
 		fol_read_argument(p, args);
-	else 
+	else
 	{
 		get_fractal_type(args, p);
 		fol_add_window_to_list(args);

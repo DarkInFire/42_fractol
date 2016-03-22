@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   read_argument.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jrouzier <jrouzier@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/03/22 11:18:17 by jrouzier          #+#    #+#             */
+/*   Updated: 2016/03/22 11:19:02 by jrouzier         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "fractol.h"
 
 static int	check_parameter(char *p, t_args *args)
@@ -14,10 +26,10 @@ static int	check_parameter(char *p, t_args *args)
 	return (1);
 }
 
-int		fol_read_argument(char *a, t_args *args)
+int			fol_read_argument(char *a, t_args *args)
 {
 	if (args->pwait)
-		check_parameter(a,args);
+		check_parameter(a, args);
 	else if (ft_strcmp(a, "wh") == 0)
 		return (1);
 	else if (ft_strcmp(a, "ww") == 0)
