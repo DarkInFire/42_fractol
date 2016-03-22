@@ -34,6 +34,7 @@ SRC_NAME = main.c \
 		   init_args.c \
 		   init_window.c \
 		   add_window_to_list.c \
+		   show_help.c \
 		   read_argument.c \
 		   arg_window_height.c \
 		   arg_window_width.c \

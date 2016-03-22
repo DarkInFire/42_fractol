@@ -50,6 +50,7 @@ typedef struct		s_comp
 
 int					fractol(t_args *args);
 void				fol_putusage(char *s);
+int					fol_show_help(t_args *args);
 
 /*
 ** Argument parsing and widow initialization

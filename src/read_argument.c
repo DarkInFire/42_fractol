@@ -23,7 +23,7 @@ int		fol_read_argument(char *a, t_args *args)
 	else if (ft_strcmp(a, "it") == 0)
 		return (3);
 	else if (ft_strcmp(a, "help") == 0)
-		fol_show_help();
+		fol_show_help(args);
 	else
 		fol_putusage("Unknow argument.");
 	return (0);
