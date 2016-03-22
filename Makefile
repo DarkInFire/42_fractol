@@ -36,7 +36,8 @@ SRC_NAME = main.c \
 		   add_window_to_list.c \
 		   read_argument.c \
 		   arg_window_height.c \
-		   arg_window_width.c
+		   arg_window_width.c \
+		   arg_iterations.c
 
 LDFLAGS = -Llibft -Lmlx -L/usr/X11R6/lib
 LDLIBS = -lft -lmlx -lX11 -framework OpenGL -framework AppKit

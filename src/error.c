@@ -17,7 +17,7 @@
 void	fol_putusage(char *s)
 {
 	ft_putendl(s);
-	ft_putstr("usage:             fractol fractol_type\n");
+	ft_putstr("usage:             fractol [ -arg ] fractol_type\n");
 	ft_putstr("Available Fractol: julia mandelbrot douady\n");
 	ft_putstr("Arguments are case-sentitive.\n");
 	throw_error(0);

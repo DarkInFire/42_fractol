@@ -22,7 +22,7 @@ static void		read_arg(char *p, t_args *args)
 	if (!(args->tmp_window))
 		args->tmp_window = fol_init_window(args);
 	if (p[0] == '-')
-		args->pwait = fol_read_argument(p, args);
+		args->pwait = fol_read_argument(p + 1, args);
 	else if (args->pwait)
 		fol_read_argument(p, args);
 	else 
@@ -42,6 +42,10 @@ t_args			*fol_arg_parser(int nb_params, char **params)
 	i = -1;
 	while (++i < nb_params)
 		read_arg(params[i + 1], args);
+	if (args->pwait)
+		fol_putusage("No argument value providen.");
+	if (!(args->w_list))
+		fol_putusage("No fractal type providen.");
 	if (!(args->mlx = mlx_init()))
 		throw_error("Unable to initialize mlx.");
 	return (args);

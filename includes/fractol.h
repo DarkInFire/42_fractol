@@ -65,6 +65,7 @@ int					fol_add_window_to_list(t_args *args);
 */
 int					arg_window_height(char *p, t_args *args);
 int					arg_window_width(char *p, t_args *args);
+int					arg_iterations(char *p, t_args *args);
 
 /*
 ** Hooks functions

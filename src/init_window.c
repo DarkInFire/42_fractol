@@ -8,7 +8,7 @@ t_window	*fol_init_window(t_args *args)
 
 	window = (t_window *)malloc(sizeof(t_window));
 	window->size = ft_getpos(1000, 1000, 0);
-	window->type = 1;
+	window->type = 0;
 	window->zoom = 1;
 	window->mouse_cursor = ft_getpos(0, 0, 0);
 	window->offset = ft_getpos(0, 0, 0);
