@@ -15,11 +15,10 @@
 
 int		fol_reset_window(t_window *window)
 {
-	window->size = ft_getpos(1000, 1000, 0);
-	window->type = 0;
+	ft_setpos(window->size,1000, 1000, 0);
+	ft_setpos(window->mouse_cursor, 0, 0, 0);
+	ft_setpos(window->offset, 0, 0, 0);
 	window->zoom = 1;
-	window->mouse_cursor = ft_getpos(0, 0, 0);
-	window->offset = ft_getpos(0, 0, 0);
 	window->it = 42;
 	window->lock_mouse = 0;
 	window->show_menu = 1;

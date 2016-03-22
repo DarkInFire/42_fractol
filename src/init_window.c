@@ -18,7 +18,10 @@ t_window	*fol_init_window(t_args *args)
 	t_window	*window;
 
 	window = (t_window *)malloc(sizeof(t_window));
-	fol_reset_window(window);
 	window->args = (void *)args;
+	window->size = ft_getpos(0, 0, 0);
+	window->offset = ft_getpos(0, 0, 0);
+	window->mouse_cursor = ft_getpos(0, 0, 0);
+	fol_reset_window(window);
 	return (window);
 }
