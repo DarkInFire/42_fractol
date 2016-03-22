@@ -6,7 +6,7 @@
 #    By: jrouzier <jrouzier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/06 19:23:02 by jrouzier          #+#    #+#              #
-#    Updated: 2016/03/15 12:40:23 by jrouzier         ###   ########.fr        #
+#    Updated: 2016/03/22 10:35:45 by jrouzier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ SRC_NAME = ft_memchr.c ft_putstr.c ft_strjoin.c ft_strsplit.c ft_memcmp.c \
 	ft_gnl.c ft_putnstr.c ft_putnstr_fd.c ft_max.c ft_putnbrbase_fd.c \
 	ft_itoa_base.c ft_putnbrbase.c ft_nstrlen.c ft_putwstr.c ft_putwstr_fd.c \
 	ft_putwchar.c ft_putwchar_fd.c ft_putnwstr.c ft_lstaddnlast.c ft_abs.c \
-	ft_printtab.c ft_setpos.c ft_strisdigit.c
+	ft_printtab.c ft_setpos.c ft_strisdigit.c ft_putfile_fd.c ft_putfile.c \
 
 CC = clang
 CFLAGS = -Werror -Wall -Wextra

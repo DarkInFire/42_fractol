@@ -6,7 +6,7 @@
 /*   By: jrouzier <jrouzier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/06 19:15:01 by jrouzier          #+#    #+#             */
-/*   Updated: 2016/03/19 17:31:14 by jrouzier         ###   ########.fr       */
+/*   Updated: 2016/03/22 10:36:15 by jrouzier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,5 +135,7 @@ void				ft_lstaddnlast(t_list **list, void const *content,
 int					ft_abs(int v);
 void				ft_printtab(int **tab, size_t h, size_t w);
 int					ft_strisdigit(char *s);
+int					ft_putfile_fd(int fdi, int fdo);
+int					ft_putfile(int fdo);
 
 #endif
