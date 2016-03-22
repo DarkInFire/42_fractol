@@ -6,7 +6,7 @@
 /*   By: jrouzier <jrouzier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/21 14:07:35 by jrouzier          #+#    #+#             */
-/*   Updated: 2016/03/21 14:07:37 by jrouzier         ###   ########.fr       */
+/*   Updated: 2016/03/22 16:51:37 by jrouzier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	key_color(int keycode, t_window *window)
 	return (1);
 }
 
-int		fol_key_hook(int keycode, t_window *window)
+int			fol_key_hook(int keycode, t_window *window)
 {
 	if (keycode == 53)
 		exit_fol((t_args *)window->args);

@@ -6,7 +6,7 @@
 /*   By: jrouzier <jrouzier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/20 17:03:55 by jrouzier          #+#    #+#             */
-/*   Updated: 2016/03/20 17:03:56 by jrouzier         ###   ########.fr       */
+/*   Updated: 2016/03/22 16:51:50 by jrouzier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int		fol_getcolor(t_window *window, t_pos *pos)
 	g = (sin(i * M_PI * 4 - M_PI_2) + 1) / 2 * 255;
 	b = (sin(i * M_PI * 8 - M_PI_2) + 1) / 2 * 255;
 	if (window->color == 1)
-		return (0x10000 * g + 0x100 * b + r);	
+		return (0x10000 * g + 0x100 * b + r);
 	else if (window->color == 2)
 		return (0x10000 * r + 0x100 * b + g);
 	else if (window->color == 3)

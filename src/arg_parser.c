@@ -6,7 +6,7 @@
 /*   By: jrouzier <jrouzier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/22 11:19:29 by jrouzier          #+#    #+#             */
-/*   Updated: 2016/03/22 11:21:07 by jrouzier         ###   ########.fr       */
+/*   Updated: 2016/03/22 16:52:09 by jrouzier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static int		get_fractal_type(t_args *args, char *fractal)
 {
 	time_t	t;
 
-	srand((unsigned) time(&t));
+	srand((unsigned)time(&t));
 	if (ft_strcmp(fractal, "julia") == 0)
 		args->tmp_window->type = 1;
 	else if (ft_strcmp(fractal, "mandelbrot") == 0)
