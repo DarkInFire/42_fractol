@@ -34,6 +34,7 @@ SRC_NAME = main.c \
 		   arg_parser.c \
 		   init_args.c \
 		   init_window.c \
+		   reset_window.c \
 		   add_window_to_list.c \
 		   show_help.c \
 		   read_argument.c \

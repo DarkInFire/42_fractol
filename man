@@ -35,8 +35,15 @@ FRACTAL NAVIGATION
 	RIGHT		Move the view to the right.
 	LEFT		Move the view to the left.
 
-	1 to 5		Change color set.
-	L		Lock Julia parameter.
+	NUM1		Green color.
+	NUM2		Greenish-blue color.
+	NUM3		Pink color.
+	NUM4		Orange color.
+	NUM5		Blue color
+	(/!\ These color may not be accurate due to multiples parameters
+		like the amout of iterations, the set and many others.)
+
+	L		Lock the Julia parameter.
 	R		Reset window to factory settings.
 
 	MOUSE

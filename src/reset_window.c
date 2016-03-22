@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_window.c                                      :+:      :+:    :+:   */
+/*   reset_window.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jrouzier <jrouzier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -13,12 +13,17 @@
 #include "fractol.h"
 #include "libft.h"
 
-t_window	*fol_init_window(t_args *args)
+int		fol_reset_window(t_window *window)
 {
-	t_window	*window;
-
-	window = (t_window *)malloc(sizeof(t_window));
-	fol_reset_window(window);
-	window->args = (void *)args;
-	return (window);
+	window->size = ft_getpos(1000, 1000, 0);
+	window->type = 0;
+	window->zoom = 1;
+	window->mouse_cursor = ft_getpos(0, 0, 0);
+	window->offset = ft_getpos(0, 0, 0);
+	window->it = 42;
+	window->lock_mouse = 0;
+	window->show_menu = 1;
+	window->tech_menu = 0;
+	window->color = 1;
+	return (1);
 }
