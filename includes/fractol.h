@@ -68,6 +68,8 @@ int					arg_window_height(char *p, t_args *args);
 int					arg_window_width(char *p, t_args *args);
 int					arg_iterations(char *p, t_args *args);
 int					arg_zoom(char *p, t_args *args);
+int					arg_xoff(char *p, t_args *args);
+int					arg_yoff(char *p, t_args *args);
 
 /*
 ** Hooks functions
