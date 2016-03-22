@@ -46,6 +46,9 @@ FRACTAL NAVIGATION
 	(/!\ These color may not be accurate due to multiples parameters
 		like the amout of iterations, the set and many others.)
 
+	NUM_*		Increase the window size.
+	NUM_/		Decrease the window size;
+
 	L		Lock the Julia parameter.
 	R		Reset window to factory settings.
 

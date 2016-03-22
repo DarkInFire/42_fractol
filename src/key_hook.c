@@ -31,6 +31,18 @@ static int	numeric_keypad(int keycode, t_window *window)
 	return (1);
 }
 
+static int	alphabet_keypad(int keycode, t_window *window)
+{
+	if (keycode == KEY_L)
+		window->lock_mouse = (window->lock_mouse) ? 0 : 1;
+	else if (keycode == KEY_R)
+		fol_reset_window(window);
+	else if (keycode == KEY_T || keycode == KEY_V || keycode == KEY_F ||
+		keycode == KEY_G)
+		hook_window_size_modify(window, keycode);
+	return (1);
+}
+
 int			fol_key_hook(int keycode, t_window *window)
 {
 	if (keycode == ECHAP)
@@ -43,11 +55,8 @@ int			fol_key_hook(int keycode, t_window *window)
 		window->offset->x += (10 * ZOOM);
 	else if (keycode == KEY_RIGHT)
 		window->offset->x -= (10 * ZOOM);
-	else if (keycode == KEY_L)
-		window->lock_mouse = (window->lock_mouse) ? 0 : 1;
-	else if (keycode == KEY_R)
-		fol_reset_window(window);
 	numeric_keypad(keycode, window);
+	alphabet_keypad(keycode, window);
 	fol_reset_display(window);
 	return (1);
 }

@@ -46,7 +46,8 @@ SRC_NAME = main.c \
 		   arg_zoom.c \
 		   arg_xoff.c \
 		   arg_yoff.c \
-		   arg_color.c
+		   arg_color.c \
+		   hook_window_size_modify.c
 
 LDFLAGS = -Llibft -Lmlx -L/usr/X11R6/lib
 LDLIBS = -lft -lmlx -lX11 -framework OpenGL -framework AppKit

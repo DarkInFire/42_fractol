@@ -13,12 +13,11 @@
 #include "fractol.h"
 #include "mlx.h"
 
-void	fol_change_window_size(t_window *window, t_pos *size)
+void	fol_redraw_window(t_window *window)
 {
 	mlx_destroy_image(window->mlx, window->img);
 	mlx_destroy_window(window->mlx, window->window);
-	free(window->size);
-	window->size = size;
 	fol_create_mlx_window(window);
+	fol_init_hooks(window);
 	fol_display(window);
 }

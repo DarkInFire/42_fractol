@@ -12,8 +12,16 @@
 
 #ifndef FRACTOL_H
 # define FRACTOL_H
-# define ZOOM 1.1
 # include "libft.h"
+
+/*
+** Static values
+*/
+# define ZOOM 1.1
+# define WIN_MAX_WIDTH 2560
+# define WIN_MAX_HEIGHT 1440
+# define WIN_MIN_WIDTH 20
+# define WIN_MIN_HEIGHT 20
 
 /*
 ** Numeric keypad
@@ -25,6 +33,8 @@
 # define NUM_5 87
 # define NUM_PLUS 69
 # define NUM_MINUS 78
+# define NUM_MULT 67
+# define NUM_DIV 75
 
 /*
 ** Misc keys
@@ -36,6 +46,10 @@
 */
 # define KEY_R 15
 # define KEY_L 37
+# define KEY_T 17
+# define KEY_V 9
+# define KEY_F 3
+# define KEY_G 5
 
 /*
 ** Arrows
@@ -99,7 +113,7 @@ void				fol_create_mlx_window(t_window *window);
 t_window			*fol_init_window(t_args *args);
 int					fol_reset_window(t_window *window);
 int					fol_add_window_to_list(t_args *args);
-void				fol_change_window_size(t_window *window, t_pos *size);
+void				fol_redraw_window(t_window *window);
 
 /*
 ** Argument list
@@ -113,7 +127,7 @@ int					arg_yoff(char *p, t_args *args);
 int					arg_color(char *p, t_args *args);
 
 /*
-** Hooks functions
+** MLX hooks
 */
 int					fol_init_hooks(t_window *window);
 int					fol_key_hook(int keycode, t_window *window);
@@ -121,6 +135,11 @@ int					fol_mousebutton_hook(int button, int x, int y,
 	t_window *window);
 int					fol_mousecursor_hook(int x, int y, t_window *window);
 int					fol_expose_hook(t_window *window);
+
+/*
+** Hooks functions
+*/
+int					hook_window_size_modify(t_window *window, int direction);
 
 /*
 ** Display functions
