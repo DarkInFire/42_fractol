@@ -6,6 +6,20 @@ NAME
 SYNOPSIS
 	fractol [[OPTIONS]... [FRACTAL]]...
 
+DESCRIPTION
+	This program allow you to simply discover the beautiful world of fractals.
+	To use, just launch the program with the fractal you want to see.
+
+	You can put parameters before the fractal name to change the program
+	behaviour.
+
+	You can also open multiple fractals in one time. The following example
+	will open 2 fractals:
+		./fractal julia mandelbrot
+	The following example will open multiples fractals with different
+	parameters:
+		./fractal -wh 100 -it 42 julia mandelbrot -zoom 2 douady
+
 FRACTALS
 	julia
 	mandelbrot
