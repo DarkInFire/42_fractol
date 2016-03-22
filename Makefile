@@ -42,7 +42,8 @@ SRC_NAME = main.c \
 		   arg_iterations.c \
 		   arg_zoom.c \
 		   arg_xoff.c \
-		   arg_yoff.c
+		   arg_yoff.c \
+		   arg_color.c
 
 LDFLAGS = -Llibft -Lmlx -L/usr/X11R6/lib
 LDLIBS = -lft -lmlx -lX11 -framework OpenGL -framework AppKit

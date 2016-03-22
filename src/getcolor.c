@@ -34,4 +34,5 @@ int		fol_getcolor(t_window *window, t_pos *pos)
 		return (0x10000 * b + 0x100 * g + r);
 	else if (window->color == 5)
 		return (0x10000 * g + 0x100 * r + b);
+	return (0x10000 * g + 0x100 * r + b);
 }

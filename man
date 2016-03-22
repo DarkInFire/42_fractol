@@ -37,6 +37,7 @@ FRACTAL NAVIGATION
 
 	1 to 5		Change color set.
 	L		Lock Julia parameter.
+	R		Reset window to factory settings.
 
 	MOUSE
 	Cursor position	Change parameter in Julia set.
@@ -62,5 +63,9 @@ OPTIONS
 			Take a int as parameter.
 
 	-m_lock		Lock the julia parameter at the start of the program.
+
+	-c		Set base color code.
+			Take a int as parameter. Should be comprised between 1 and 5
+			included
 
 	-help		Show this screen.

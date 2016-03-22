@@ -26,6 +26,8 @@ static int	check_parameter(char *p, t_args *args)
 		arg_xoff(p, args);
 	else if (args->pwait == 6)
 		arg_yoff(p, args);
+	else if (args->pwait == 7)
+		arg_color(p, args);
 	args->pwait = 0;
 	return (1);
 }
@@ -50,6 +52,8 @@ int			fol_read_argument(char *a, t_args *args)
 		return (6);
 	else if (ft_strcmp(a, "m_lock") == 0)
 		args->tmp_window->lock_mouse = 1;
+	else if (ft_strcmp(a, "c") == 0)
+		return (7);
 	else
 		fol_putusage("Unknow argument.");
 	return (0);
