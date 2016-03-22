@@ -22,7 +22,7 @@ static int		get_fractal_type(t_args *args, char *fractal)
 		args->tmp_window->type = 2;
 	else if (ft_strcmp(fractal, "douady") == 0)
 		args->tmp_window->type = 3;
-	else if (ft_strcmp(fractal, "sierpinski") == 0)
+	else if (ft_strcmp(fractal, "sierpinski_carpet") == 0)
 		args->tmp_window->type = 4;
 	else
 		fol_putusage("Unknow type of fractol.");

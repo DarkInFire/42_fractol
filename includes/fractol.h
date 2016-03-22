@@ -32,6 +32,8 @@ typedef struct		s_window
 	t_pos			*mouse_cursor;
 	int				it;
 	int				lock_mouse;
+	int				show_menu;
+	int				tech_menu;
 }					t_window;
 
 typedef struct		s_args
@@ -102,7 +104,7 @@ int					f_mandelbrot(t_window *window, t_pos *pos, t_comp *z,
 	t_comp *x);
 int					f_douady(t_window *window, t_pos *pos, t_comp *z,
 	t_comp *x);
-int					f_sierpinski(t_window *window, t_pos *pos);
+int					f_sierpinski_carpet(t_window *window, t_pos *pos);
 
 /*
 ** Zoom in/out

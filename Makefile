@@ -23,7 +23,7 @@ SRC_NAME = main.c \
 		   f_douady.c \
 		   f_julia.c \
 		   f_mandelbrot.c \
-		   f_sierpinski.c \
+		   f_sierpinski_carpet.c \
 		   zoom_in.c \
 		   zoom_out.c \
 		   init_hooks.c \
