@@ -21,13 +21,13 @@ int		fol_key_hook(int keycode, t_window *window)
 	else if (keycode == 69)
 		window->it++;
 	else if (keycode == 126)
-		window->offset->x -= (10 * ZOOM);
+		window->offset->y += (10 * ZOOM);
 	else if (keycode == 125)
-		window->offset->y += (10 * ZOOM);
+		window->offset->y -= (10 * ZOOM);
 	else if (keycode == 123)
-		window->offset->x -= (10 * ZOOM);
+		window->offset->x += (10 * ZOOM);
 	else if (keycode == 124)
-		window->offset->y += (10 * ZOOM);
+		window->offset->x -= (10 * ZOOM);
 	else if (keycode == 37)
 		window->lock_mouse = (window->lock_mouse) ? 0 : 1;
 	fol_reset_display(window);
