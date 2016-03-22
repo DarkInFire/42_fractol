@@ -12,9 +12,13 @@
 
 #include "fractol.h"
 
-static int	key_color(int keycode, t_window *window)
+static int	numeric_keypad(int keycode, t_window *window)
 {
-	if (keycode == NUM_1)
+	if (keycode == NUM_MINUS)
+		window->it -= (window->it > 0) ? 1 : 0;
+	else if (keycode == NUM_PLUS)
+		window->it++;
+	else if (keycode == NUM_1)
 		window->color = 1;
 	else if (keycode == NUM_2)
 		window->color = 2;
@@ -31,10 +35,6 @@ int			fol_key_hook(int keycode, t_window *window)
 {
 	if (keycode == ECHAP)
 		exit_fol((t_args *)window->args);
-	else if (keycode == NUM_MINUS)
-		window->it -= (window->it > 0) ? 1 : 0;
-	else if (keycode == NUM_PLUS)
-		window->it++;
 	else if (keycode == KEY_UP)
 		window->offset->y += (10 * ZOOM);
 	else if (keycode == KEY_DOWN)
@@ -47,7 +47,7 @@ int			fol_key_hook(int keycode, t_window *window)
 		window->lock_mouse = (window->lock_mouse) ? 0 : 1;
 	else if (keycode == KEY_R)
 		fol_reset_window(window);
-	key_color(keycode, window);
+	numeric_keypad(keycode, window);
 	fol_reset_display(window);
 	return (1);
 }

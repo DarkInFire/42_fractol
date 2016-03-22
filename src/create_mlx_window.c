@@ -1,35 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fractol.c                                          :+:      :+:    :+:   */
+/*   create_mlx_window.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jrouzier <jrouzier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/03/19 20:30:38 by jrouzier          #+#    #+#             */
-/*   Updated: 2016/03/20 17:02:18 by jrouzier         ###   ########.fr       */
+/*   Created: 2016/03/20 17:02:22 by jrouzier          #+#    #+#             */
+/*   Updated: 2016/03/20 17:02:29 by jrouzier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
-#include "libft.h"
 #include "mlx.h"
-#include <stdlib.h>
 
-int				fractol(t_args *args)
+void	fol_create_mlx_window(t_window *window)
 {
-	t_list		*tmp;
-	t_window	*window;
-
-	tmp = args->w_list;
-	while (tmp)
-	{
-		window = (t_window *)tmp->content;
-		window->mlx = args->mlx;
-		fol_create_mlx_window(window);
-		fol_init_hooks(window);
-		fol_display(window);
-		tmp = tmp->next;
-	}
-	mlx_loop(args->mlx);
-	return (1);
+	if (!(window->window = mlx_new_window(window->mlx, window->size->x,
+		window->size->y, "fractol")))
+		throw_error("Unable to initialize window");
 }

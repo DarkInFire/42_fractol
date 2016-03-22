@@ -86,14 +86,20 @@ void				fol_putusage(char *s);
 int					fol_show_help(t_args *args);
 
 /*
-** Argument parsing and widow initialization
+** Argument parsing and window initialization
 */
 t_args				*fol_arg_parser(int nb_params, char **params);
 int					fol_read_argument(char *a, t_args *args);
 t_args				*fol_init_args();
+
+/*
+** Window management
+*/
+void				fol_create_mlx_window(t_window *window);
 t_window			*fol_init_window(t_args *args);
 int					fol_reset_window(t_window *window);
 int					fol_add_window_to_list(t_args *args);
+void				fol_change_window_size(t_window *window, t_pos *size);
 
 /*
 ** Argument list

@@ -38,6 +38,8 @@ SRC_NAME = main.c \
 		   add_window_to_list.c \
 		   show_help.c \
 		   read_argument.c \
+		   redraw_window.c \
+		   create_mlx_window.c \
 		   arg_window_height.c \
 		   arg_window_width.c \
 		   arg_iterations.c \
