@@ -7,11 +7,17 @@
 int		fol_show_help(t_args *args)
 {
 	int fd;
+	char *s;
 
 	fd = open("man", O_RDONLY);
 	if (fd < 0)
 		throw_error("Unable to open help file.");
-	ft_putfile(fd);
+	while ((ft_gnl(fd, &s)) > 0)
+	{
+		ft_putstr(s);
+		ft_putchar('\n');
+	}
+	close(fd);
 	exit_fol(args);
 	return (1);
 }
