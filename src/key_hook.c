@@ -14,10 +14,8 @@
 
 static int	numeric_keypad(int keycode, t_window *window)
 {
-	if (keycode == NUM_MINUS)
-		window->it -= (window->it > 0) ? 1 : 0;
-	else if (keycode == NUM_PLUS)
-		window->it++;
+	if (keycode == NUM_MINUS || keycode == NUM_PLUS)
+		hook_iteration_modify(window, keycode);
 	else if (keycode == NUM_1)
 		window->color = 1;
 	else if (keycode == NUM_2)
@@ -36,7 +34,10 @@ static int	alphabet_keypad(int keycode, t_window *window)
 	if (keycode == KEY_L)
 		window->lock_mouse = (window->lock_mouse) ? 0 : 1;
 	else if (keycode == KEY_R)
+	{
 		fol_reset_window(window);
+		fol_redraw_window(window);
+	}
 	else if (keycode == KEY_T || keycode == KEY_V || keycode == KEY_F ||
 		keycode == KEY_G)
 		hook_window_size_modify(window, keycode);
