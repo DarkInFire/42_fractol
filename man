@@ -26,6 +26,9 @@ FRACTALS
 	douady
 	sierpinski_carpet
 
+	random
+		Select a random set between the availables fractals.
+
 FRACTAL NAVIGATION
 	You can use the mouse and the keyboard to navigate inside the view.
 

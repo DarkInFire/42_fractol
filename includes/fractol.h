@@ -16,13 +16,34 @@
 # include "libft.h"
 
 /*
-** Keys to change color
+** Numeric keypad
 */
-# define COLOR1 83
-# define COLOR2 84
-# define COLOR3 85
-# define COLOR4 86
-# define COLOR5 87
+# define NUM_1 83
+# define NUM_2 84
+# define NUM_3 85
+# define NUM_4 86
+# define NUM_5 87
+# define NUM_PLUS 69
+# define NUM_MINUS 78
+
+/*
+** Misc keys
+*/
+# define ECHAP 53
+
+/*
+** Alphabet keys
+*/
+# define KEY_R 15
+# define KEY_L 37
+
+/*
+** Arrows
+*/
+# define KEY_UP 126
+# define KEY_DOWN 125
+# define KEY_LEFT 123
+# define KEY_RIGHT 124
 
 typedef struct		s_window
 {
