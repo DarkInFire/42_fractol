@@ -13,9 +13,14 @@
 #include "fractol.h"
 #include "libft.h"
 #include "mlx.h"
+#include <stdlib.h>
+#include <time.h>
 
 static int		get_fractal_type(t_args *args, char *fractal)
 {
+	time_t	t;
+
+	srand((unsigned) time(&t));
 	if (ft_strcmp(fractal, "julia") == 0)
 		args->tmp_window->type = 1;
 	else if (ft_strcmp(fractal, "mandelbrot") == 0)
@@ -24,6 +29,8 @@ static int		get_fractal_type(t_args *args, char *fractal)
 		args->tmp_window->type = 3;
 	else if (ft_strcmp(fractal, "sierpinski_carpet") == 0)
 		args->tmp_window->type = 4;
+	else if (ft_strcmp(fractal, "random") == 0)
+		args->tmp_window->type = rand() % 4 + 1;
 	else
 		fol_putusage("Unknow type of fractol.");
 	return (0);
