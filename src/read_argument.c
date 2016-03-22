@@ -22,6 +22,8 @@ static int	check_parameter(char *p, t_args *args)
 		arg_iterations(p, args);
 	else if (args->pwait == 4)
 		arg_zoom(p, args);
+	else if (args->pwait == 5)
+		arg_xoff(p, args);
 	args->pwait = 0;
 	return (1);
 }
@@ -40,6 +42,8 @@ int			fol_read_argument(char *a, t_args *args)
 		fol_show_help(args);
 	else if (ft_strcmp(a, "zoom") == 0)
 		return (4);
+	else if (ft_strcmp(a, "xoff") == 0)
+		return (5);
 	else
 		fol_putusage("Unknow argument.");
 	return (0);
