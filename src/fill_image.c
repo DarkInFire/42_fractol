@@ -6,7 +6,7 @@
 /*   By: jrouzier <jrouzier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/21 14:05:20 by jrouzier          #+#    #+#             */
-/*   Updated: 2016/03/21 14:05:26 by jrouzier         ###   ########.fr       */
+/*   Updated: 2016/03/22 14:29:02 by jrouzier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 
 void	fol_fill_image(t_window *window)
 {
-	int 	x;
-	int 	y;
+	int		x;
+	int		y;
 	t_pos	*pos;
 
 	x = -1;
