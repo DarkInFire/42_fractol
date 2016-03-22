@@ -33,7 +33,7 @@ static void		read_arg(char *p, t_args *args)
 
 	if (!(args->tmp_window))
 		args->tmp_window = fol_init_window(args);
-	if (p[0] == '-')
+	if (p[0] == '-' && !(args->pwait))
 		args->pwait = fol_read_argument(p + 1, args);
 	else if (args->pwait)
 		fol_read_argument(p, args);

@@ -24,6 +24,8 @@ int		arg_window_height(char *p, t_args *args)
 	size = ft_atoi(p);
 	if (size <= 0)
 		throw_error("Window size must be stricly greater than 0.");
+	else if (size > 1080)
+		throw_error("Window height must be equal or inferior to 1080px.");
 	args->tmp_window->size->y = size;
 	return (1);
 }

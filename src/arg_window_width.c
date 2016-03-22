@@ -24,6 +24,8 @@ int		arg_window_width(char *p, t_args *args)
 	size = ft_atoi(p);
 	if (size <= 0)
 		throw_error("Window size must be stricly greater than 0.");
+	else if (size > 1920)
+		throw_error("Window width must be equal or inferior to 1920px.");
 	args->tmp_window->size->x = size;
 	return (1);
 }
