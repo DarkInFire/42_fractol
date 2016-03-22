@@ -48,6 +48,8 @@ int			fol_read_argument(char *a, t_args *args)
 		return (5);
 	else if (ft_strcmp(a, "yoff") == 0)
 		return (6);
+	else if (ft_strcmp(a, "m_lock") == 0)
+		args->tmp_window->lock_mouse = 1;
 	else
 		fol_putusage("Unknow argument.");
 	return (0);
