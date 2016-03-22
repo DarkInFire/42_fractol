@@ -22,10 +22,16 @@ int		arg_window_height(char *p, t_args *args)
 	if (!(ft_strisdigit(p)))
 		throw_error("Window size must be digit only!");
 	size = ft_atoi(p);
-	if (size <= 0)
-		throw_error("Window size must be stricly greater than 0.");
+	if (size < WIN_MIN_HEIGHT)
+	{
+		size = WIN_MIN_HEIGHT;
+		ft_putendl("Window height have been increased.");
+	}
 	else if (size > 1080)
-		throw_error("Window height must be equal or inferior to 1080px.");
+	{
+		size = WIN_MAX_HEIGHT;
+		ft_putendl("Window height have been decreased.");
+	}
 	args->tmp_window->size->y = size;
 	return (1);
 }

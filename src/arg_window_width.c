@@ -22,10 +22,16 @@ int		arg_window_width(char *p, t_args *args)
 	if (!(ft_strisdigit(p)))
 		throw_error("Window size must be digit only!");
 	size = ft_atoi(p);
-	if (size <= 0)
-		throw_error("Window size must be stricly greater than 0.");
-	else if (size > 1920)
-		throw_error("Window width must be equal or inferior to 1920px.");
+	if (size < WIN_MIN_WIDTH)
+	{
+		size = WIN_MIN_WIDTH;
+		ft_putendl("Window width have been increased.");
+	}
+	else if (size > WIN_MAX_WIDTH)
+	{
+		size = WIN_MAX_WIDTH;
+		ft_putendl("Window width have been decreased.");
+	}
 	args->tmp_window->size->x = size;
 	return (1);
 }
