@@ -43,13 +43,16 @@ FRACTAL NAVIGATION
 	NUM3		Pink color.
 	NUM4		Orange color.
 	NUM5		Blue color
-	(/!\ These color may not be accurate due to multiples parameters
+	(/!\ These colors may not be accurate due to multiples parameters
 		like the amout of iterations, the set and many others.)
 
 	T		Increase the window height.
 	V		Decrease the window height.
 	F		Increase the window width.
 	G		Decrease the window width.
+
+	NUM_MINUS	Increase by 1 the amout of iterations.
+	NUM_PLUS	Decrease by 1 the amount of iterations.
 
 	L		Lock the Julia parameter.
 	R		Reset window to factory settings.

@@ -22,6 +22,7 @@
 # define WIN_MAX_HEIGHT 1440
 # define WIN_MIN_WIDTH 20
 # define WIN_MIN_HEIGHT 20
+# define ITE_MIN 1
 
 /*
 ** Numeric keypad
@@ -140,6 +141,7 @@ int					fol_expose_hook(t_window *window);
 ** Hooks functions
 */
 int					hook_window_size_modify(t_window *window, int direction);
+int					hook_iteration_modify(t_window *window, int keycode);
 
 /*
 ** Display functions
