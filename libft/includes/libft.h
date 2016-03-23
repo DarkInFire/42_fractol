@@ -137,5 +137,7 @@ void				ft_printtab(int **tab, size_t h, size_t w);
 int					ft_strisdigit(char *s);
 int					ft_putfile_fd(int fdi, int fdo);
 int					ft_putfile(int fdo);
+int					ft_putdebug_fd(int fd, int lvl, int g_lvl, char *s);
+int					ft_putdebug(int lvl, int g_lvl, char *s);
 
 #endif

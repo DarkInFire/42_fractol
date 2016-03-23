@@ -30,6 +30,7 @@ SRC_NAME = ft_memchr.c ft_putstr.c ft_strjoin.c ft_strsplit.c ft_memcmp.c \
 	ft_itoa_base.c ft_putnbrbase.c ft_nstrlen.c ft_putwstr.c ft_putwstr_fd.c \
 	ft_putwchar.c ft_putwchar_fd.c ft_putnwstr.c ft_lstaddnlast.c ft_abs.c \
 	ft_printtab.c ft_setpos.c ft_strisdigit.c ft_putfile_fd.c ft_putfile.c \
+	ft_putdebug_fd.c ft_putdebug.c
 
 CC = clang
 CFLAGS = -Werror -Wall -Wextra
