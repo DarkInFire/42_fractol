@@ -22,5 +22,6 @@ t_args	*fol_init_args(void)
 	args->w_list = NULL;
 	args->tmp_window = NULL;
 	args->pwait = 0;
+	args->debug_level = 0;
 	return (args);
 }

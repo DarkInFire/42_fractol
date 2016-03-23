@@ -15,6 +15,6 @@
 int		ft_putdebug_fd(int fd, int lvl, int g_lvl, char *s)
 {
 	if (lvl <= g_lvl)
-		return (write(fd, s, ft_strlen(s)));
-	return (0);
+		ft_putendl_fd(s, fd);
+	return (1);
 }

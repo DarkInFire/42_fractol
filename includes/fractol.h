@@ -87,6 +87,7 @@ typedef struct		s_args
 	void			*mlx;
 	t_list			*w_list;
 	int				pwait;
+	int				debug_level;
 	t_window		*tmp_window;
 }					t_args;
 
