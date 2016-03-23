@@ -6,7 +6,7 @@
 /*   By: jrouzier <jrouzier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/12 15:37:13 by jrouzier          #+#    #+#             */
-/*   Updated: 2016/03/11 14:22:33 by jrouzier         ###   ########.fr       */
+/*   Updated: 2016/03/23 16:47:17 by jrouzier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,7 +114,7 @@ int			ft_gnl(int const fd, char **line)
 	int			result;
 	char		*tmp;
 
-	if (fd > 256 || fd < 0 || line == NULL || GNL_BUFFER == 0)
+	if (fd < 0 || line == NULL || GNL_BUFFER == 0)
 		return (-1);
 	node = get_node(fd, &fd_list);
 	node->j = node->i + 1;
