@@ -25,13 +25,12 @@ static int	get_i_from_base_fractal(t_window *window, t_pos *pos)
 		f_mandelbrot(window, pos, &z, &c);
 	else if (window->type == 3)
 		f_douady(window, pos, &z, &c);
-	i = 0;
-	while ((z.x * z.x + z.y * z.y) < 4 && i < window->it)
+	i = -1;
+	while (++i < window->it && (z.x * z.x + z.y * z.y) < 4)
 	{
 		tmp = z;
 		z.x = tmp.x * tmp.x - tmp.y * tmp.y + c.x;
 		z.y = tmp.x * tmp.y + tmp.x * tmp.y + c.y;
-		i++;
 	}
 	return (i);
 }

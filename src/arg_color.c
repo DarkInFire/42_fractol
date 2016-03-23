@@ -17,7 +17,7 @@ int		arg_color(char *p, t_args *args)
 	int		c;
 
 	if (!(ft_strisdigit(p)))
-		throw_error("Color code is a number!");
+		throw_error("Color code must be a number!");
 	c = ft_atoi(p);
 	if (c < 1 || c > 5)
 		throw_error("Color code must be a number between 1 and 5 included.");
