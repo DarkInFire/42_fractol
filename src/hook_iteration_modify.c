@@ -22,6 +22,8 @@ int		hook_iteration_modify(t_window *window, int keycode)
 		new_itmax = window->it - 1;
 		if (new_itmax < ITE_MIN)
 			ft_putendl("You can't reduce the amout of iterations.");
+		else 
+			window->it = new_itmax;
 	}
 	else
 		window->it++;
