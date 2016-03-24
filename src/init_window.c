@@ -22,6 +22,9 @@ t_window	*fol_init_window(t_args *args)
 	window->size = ft_getpos(0, 0, 0);
 	window->offset = ft_getpos(0, 0, 0);
 	window->mouse_cursor = ft_getpos(0, 0, 0);
+	window->img = NULL;
+	window->window = NULL;
+	window->mlx = NULL;
 	fol_reset_window(window);
 	return (window);
 }

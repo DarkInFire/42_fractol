@@ -17,7 +17,7 @@
 int		fol_init_hooks(t_window *window)
 {
 	mlx_expose_hook(window->window, fol_expose_hook, window);
-	mlx_key_hook(window->window, fol_key_hook, window);
+	mlx_hook(window->window, 2, 0, fol_key_hook, window);
 	mlx_mouse_hook(window->window, fol_mousebutton_hook, window);
 	if (window->type == 1)
 		mlx_hook(window->window, MotionNotify, PointerMotionMask,

@@ -23,10 +23,13 @@ static void	destroy_window(t_window *window)
 		free(window->offset);
 	if (window->mouse_cursor)
 		free(window->mouse_cursor);
-	if (window->img)
-		mlx_destroy_image(window->mlx, window->img);
-	if (window->window)
-		mlx_destroy_window(window->mlx, window->window);
+	if (window->mlx)
+	{
+		if (window->img)
+			mlx_destroy_image(window->mlx, window->img);
+		if (window->window)
+			mlx_destroy_window(window->mlx, window->window);
+	}
 }
 
 void		exit_fol(t_args *args)
@@ -34,7 +37,7 @@ void		exit_fol(t_args *args)
 	t_list		*tmp;
 	t_window	*tmpw;
 
-	if (args->tmp_window)
+	if (args && args->tmp_window)
 	{
 		destroy_window(args->tmp_window);
 		free(args->tmp_window);
@@ -50,6 +53,7 @@ void		exit_fol(t_args *args)
 		tmp = tmp->next;
 	}
 	ft_lstdel(&(args->w_list));
-	free(args);
+	if (args)
+		free(args);
 	exit(0);
 }
