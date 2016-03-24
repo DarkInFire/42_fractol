@@ -25,10 +25,7 @@ int		fol_show_help(t_args *args)
 	if (fd < 0)
 		throw_error("Unable to open help file.");
 	while ((ft_gnl(fd, &s)) > 0)
-	{
-		ft_putstr(s);
-		ft_putchar('\n');
-	}
+		ft_putendl(s);
 	close(fd);
 	exit_fol(args);
 	return (1);
