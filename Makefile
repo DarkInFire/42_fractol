@@ -6,7 +6,7 @@
 #    By: jrouzier <jrouzier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/02/23 13:02:44 by jrouzier          #+#    #+#              #
-#    Updated: 2016/03/22 11:21:50 by jrouzier         ###   ########.fr        #
+#    Updated: 2016/03/24 18:14:21 by jrouzier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,7 @@ LDFLAGS = -Llibft -Lmlx -L/usr/X11R6/lib
 LDLIBS = -lft -lmlx -lX11 -framework OpenGL -framework AppKit
 
 CC = clang
-CFLAG = -Werror -Wall -Wextra
+CFLAGS = -Werror -Wall -Wextra -O3
 SRC_PATH = src
 CPPFLAGS = -I./includes -I./libft/includes -I/usr/X11R6/include
 OBJ_PATH = obj

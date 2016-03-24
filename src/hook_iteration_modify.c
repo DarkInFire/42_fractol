@@ -6,7 +6,7 @@
 /*   By: jrouzier <jrouzier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/22 18:15:20 by jrouzier          #+#    #+#             */
-/*   Updated: 2016/03/22 18:15:21 by jrouzier         ###   ########.fr       */
+/*   Updated: 2016/03/23 20:00:11 by jrouzier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int		hook_iteration_modify(t_window *window, int keycode)
 		new_itmax = window->it - 1;
 		if (new_itmax < ITE_MIN)
 			ft_putendl("You can't reduce the amout of iterations.");
-		else 
+		else
 			window->it = new_itmax;
 	}
 	else

@@ -38,8 +38,6 @@ static int		get_fractal_type(t_args *args, char *fractal)
 
 static void		read_arg(char *p, t_args *args)
 {
-	int			f_id;
-
 	if (!(args->tmp_window))
 		args->tmp_window = fol_init_window(args);
 	if (p[0] == '-' && !(args->pwait))
