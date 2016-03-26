@@ -16,9 +16,7 @@
 int		arg_xoff(char *p, t_args *args)
 {
 	int		size;
-	int		i;
 
-	i = 0;
 	if (!(ft_strisdigit(p)))
 		throw_error("Offset modifier must be digit only!");
 	size = ft_atoi(p);

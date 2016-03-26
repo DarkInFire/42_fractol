@@ -16,9 +16,7 @@
 int		arg_window_width(char *p, t_args *args)
 {
 	int		size;
-	int		i;
 
-	i = 0;
 	if (!(ft_strisdigit(p)))
 		throw_error("Window size must be digit only!");
 	size = ft_atoi(p);
