@@ -50,10 +50,12 @@ SRC_NAME = main.c \
 		   hook_window_size_modify.c \
 		   hook_iteration_modify.c
 
-LDFLAGS = -Llibft -Lmlx -L/usr/X11R6/lib
-LDLIBS = -lft -lmlx -lX11 -framework OpenGL -framework AppKit
+LDFLAGS = -Llibft/ -Lmlx/ -L/usr/X11R6/lib
+LDLIBS = -lft -lmlx -lX11 -lXext -lm
 
-CC = clang
+#-framework OpenGL -framework AppKit
+
+CC = gcc
 CFLAGS = -Werror -Wall -Wextra -O3
 SRC_PATH = src
 CPPFLAGS = -I./includes -I./libft/includes -I/usr/X11R6/include
@@ -67,8 +69,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	make -C libft/
-	make -C mlx/
-	$(CC) $(LDFLAGS) $(LDLIBS) $^ -o $@
+	$(CC) $^ -o $@ $(LDFLAGS) $(LDLIBS) 
 
 $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c
 	@mkdir $(OBJ_PATH) 2> /dev/null || true
