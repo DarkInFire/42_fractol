@@ -32,5 +32,5 @@ int		f_mandelbrot(t_window *window, t_pos *pos)
 		z.x = tmp.x * tmp.x - tmp.y * tmp.y + c.x;
 		z.y = tmp.x * tmp.y + tmp.x * tmp.y + c.y;
 	}
-	return (i);
+	printf("Value of i = %d\n", i);
 }

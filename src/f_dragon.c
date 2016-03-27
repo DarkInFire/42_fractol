@@ -12,10 +12,10 @@ int		f_dragon(t_window *window, t_pos *pos)
 		4 - 2);
 	c.y = (((pos->y + window->offset->y) / window->zoom / window->size->y) *
 		4 - 2);
-	z.x = -0.0984651 + ((float)window->mouse_cursor->x / (float)window->size->x) *
-		2.0 - 1.0;
-	z.y = -0.45186 + ((float)window->mouse_cursor->y / (float)window->size->y) *
-		2.0 - 1.0;
+	z.x = -0.0984651 +
+		((float)window->mouse_cursor->x / (float)window->size->x) * 2.0 - 1.0;
+	z.y = -0.45186 +
+		((float)window->mouse_cursor->y / (float)window->size->y) * 2.0 - 1.0;
 	i = -1;
 	while (++i < window->it && (z.x * z.x + z.y * z.y) < 4)
 	{
