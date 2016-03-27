@@ -33,7 +33,7 @@ SRC_NAME = ft_memchr.c ft_putstr.c ft_strjoin.c ft_strsplit.c ft_memcmp.c \
 	ft_putdebug_fd.c ft_putdebug.c
 
 CC = clang
-CFLAGS = -Werror -Wall -Wextra
+CFLAGS = -Werror -Wall -Wextra -02
 SRC_PATH = src
 CPPFLAGS = -I./includes
 OBJ_PATH = obj
