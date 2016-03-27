@@ -17,7 +17,8 @@ t_window	*fol_init_window(t_args *args)
 {
 	t_window	*window;
 
-	window = (t_window *)malloc(sizeof(t_window));
+	if ((window = (t_window *)malloc(sizeof(t_window))))
+		throw_error("Unable to allocate window struct.");
 	window->args = (void *)args;
 	window->size = ft_getpos(0, 0, 0);
 	window->offset = ft_getpos(0, 0, 0);
