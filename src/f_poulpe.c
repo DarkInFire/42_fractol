@@ -29,10 +29,11 @@ int		f_poulpe(t_window *window, t_pos *pos)
 	t_complex	z;
 	t_complex	c;
 
-	z.x = (((pos->x + window->offset->x) / window->zoom / window->size->x) *
-		4 - 2);
-	z.y = (((pos->y + window->offset->y) / window->zoom / window->size->y) *
-		4 - 2);
+	z.x = -0.621 +
+		((pos->x + window->offset->x) / window->zoom / window->size->x) *
+		4 - 2;
+	z.y = ((pos->y + window->offset->y) / window->zoom / window->size->y) *
+		4 - 2;
 	c.x = ((float)window->mouse_cursor->x / (float)window->size->x) *
 		2.0 - 1.0;
 	c.y = ((float)window->mouse_cursor->y / (float)window->size->y) *
