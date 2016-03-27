@@ -91,6 +91,12 @@ typedef struct		s_args
 	t_window		*tmp_window;
 }					t_args;
 
+typedef struct		s_comp
+{
+	float			x;
+	float			y;
+}					t_comp;
+
 int					fractol(t_args *args);
 void				fol_putusage(char *s);
 int					fol_show_help(t_args *args);
@@ -155,8 +161,7 @@ void				fol_fill_image(t_window *window);
 */
 int					f_julia(t_window *window, t_pos *pos, t_comp *z,
 	t_comp *x);
-int					f_mandelbrot(t_window *window, t_pos *pos, t_comp *z,
-	t_comp *x);
+int					f_mandelbrot(t_window *window, t_pos *pos);
 int					f_douady(t_window *window, t_pos *pos, t_comp *z,
 	t_comp *x);
 int					f_sierpinski_carpet(t_window *window, t_pos *pos);
