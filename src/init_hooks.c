@@ -14,12 +14,19 @@
 #include "mlx.h"
 #include <X11/Xlib.h>
 
-int		fol_init_hooks(t_window *window)
+static int	is_mouse_hook(int fractal)
+{
+	if (fractal == 1 || fractal == 7 || fractal == 5 || fractal == 6)
+		return (1);
+	return (0);
+}
+
+int			fol_init_hooks(t_window *window)
 {
 	mlx_expose_hook(window->window, fol_expose_hook, window);
 	mlx_key_hook(window->window, fol_key_hook, window);
 	mlx_mouse_hook(window->window, fol_mousebutton_hook, window);
-	if (window->type == 1 || window->type == 7)
+	if (is_mouse_hook(window->type))
 		mlx_hook(window->window, MotionNotify, PointerMotionMask,
 			fol_mousecursor_hook, window);
 	return (1);
