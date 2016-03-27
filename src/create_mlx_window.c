@@ -16,6 +16,6 @@
 void	fol_create_mlx_window(t_window *window)
 {
 	if (!(window->window = mlx_new_window(window->mlx, window->size->x,
-		window->size->y, "fractol")))
+		window->size->y, "fractol by jrouzier.")))
 		throw_error("Unable to initialize window");
 }
