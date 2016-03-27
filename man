@@ -25,6 +25,9 @@ FRACTALS
 	mandelbrot
 	douady
 	sierpinski_carpet
+	poulpe
+	oil
+	dragon
 
 	random
 		Select a random set between the availables fractals.
@@ -87,3 +90,21 @@ OPTIONS
 			included
 
 	-help		Show this screen.
+
+ADDING YOUR OWN FRACTALS
+	You want more fractals ? You're at the right place! It's not hard to add
+	your own fractals sets.
+
+	The only hard thing that you have to do is to design an algorithm that
+	calculate the number of iteration at a given point.
+	Look at f_* files to get an example.
+	Create a f_*.c file, where * is the name of your fractol.
+	Your function prototype should be:
+		int f_*(t_window *window, t_pos *pos);
+	Put your algorithm in this function.
+	Add the prototype in fractol.h header.
+	Add a condition in get_fractal_type function (arg_parser.c).
+	Add a condition in fol_get_iteration (get_iteration.c).
+	Make and run the program.
+
+Program written by Justin Rouzier for the project fractol.
