@@ -28,6 +28,7 @@ FRACTALS
 	poulpe
 	oil
 	dragon
+	smile
 
 	random
 		Select a random set between the availables fractals.

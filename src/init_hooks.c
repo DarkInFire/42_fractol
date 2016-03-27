@@ -16,7 +16,8 @@
 
 static int	is_mouse_hook(int fractal)
 {
-	if (fractal == 1 || fractal == 7 || fractal == 5 || fractal == 6)
+	if (fractal == 1 || fractal == 7 || fractal == 5 || fractal == 6
+		|| fractal == 8)
 		return (1);
 	return (0);
 }

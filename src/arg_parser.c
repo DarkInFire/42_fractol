@@ -35,8 +35,10 @@ static int		get_fractal_type(t_args *args, char *fractal)
 		args->tmp_window->type = 6;
 	else if (ft_strcmp(fractal, "poulpe") == 0)
 		args->tmp_window->type = 7;
+	else if (ft_strcmp(fractal, "smile") == 0)
+		args->tmp_window->type = 8;
 	else if (ft_strcmp(fractal, "random") == 0)
-		args->tmp_window->type = rand() % 7 + 1;
+		args->tmp_window->type = rand() % 8 + 1;
 	else
 		fol_putusage("Unknow type of fractol.");
 	return (0);
