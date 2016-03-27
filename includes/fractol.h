@@ -163,6 +163,7 @@ int					f_julia(t_window *window, t_pos *pos);
 int					f_mandelbrot(t_window *window, t_pos *pos);
 int					f_douady(t_window *window, t_pos *pos);
 int					f_sierpinski_carpet(t_window *window, t_pos *pos);
+int					f_bouddhabrot(t_window *window, t_pos *pos);
 
 /*
 ** Zoom in/out
