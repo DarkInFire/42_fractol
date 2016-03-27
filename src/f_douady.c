@@ -13,7 +13,8 @@
 #include "fractol.h"
 
 int		f_douady(t_window *window, t_pos *pos)
-{	int		i;
+{
+	int		i;
 	t_comp	z;
 	t_comp	c;
 	t_comp	tmp;
