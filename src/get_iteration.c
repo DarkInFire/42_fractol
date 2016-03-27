@@ -26,5 +26,7 @@ int			fol_get_iteration(t_window *window, t_pos *pos)
 		return (f_dragon(window, pos));
 	else if (window->type == 6)
 		return (f_oil(window, pos));
+	else if (window->type == 7)
+		return (f_julia2(window, pos));
 	return (0);
 }
