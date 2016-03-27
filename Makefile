@@ -69,6 +69,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	make -C libft/
+	make -C mlx/
 	$(CC) $^ -o $@ $(LDFLAGS) $(LDLIBS) 
 
 $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c
