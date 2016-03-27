@@ -24,6 +24,8 @@ SRC_NAME = main.c \
 		   f_julia.c \
 		   f_mandelbrot.c \
 		   f_sierpinski_carpet.c \
+		   f_dragon.c \
+		   f_oil.c \
 		   zoom_in.c \
 		   zoom_out.c \
 		   init_hooks.c \
@@ -51,26 +53,25 @@ SRC_NAME = main.c \
 		   hook_iteration_modify.c
 
 LDFLAGS = -Llibft/ -Lmlx/ -L/usr/X11R6/lib
-LDLIBS = -lft -lmlx -lX11 -lXext -lm
+LDLIBS = -lft -lmlx -lm
+LDLIBS += -lX11 -lXext
 
-#-framework OpenGL -framework AppKit
-
-CC = gcc
+CC = clang
 CFLAGS = -Werror -Wall -Wextra -O3
 SRC_PATH = src
 CPPFLAGS = -I./includes -I./libft/includes -I/usr/X11R6/include
 OBJ_PATH = obj
 
 OBJ_NAME = $(SRC_NAME:.c=.o)
-	SRC = $(addprefix $(SRC_PATH)/,$(SRC_NAME))
-	OBJ = $(addprefix $(OBJ_PATH)/,$(OBJ_NAME))
+SRC = $(addprefix $(SRC_PATH)/,$(SRC_NAME))
+OBJ = $(addprefix $(OBJ_PATH)/,$(OBJ_NAME))
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	make -C libft/
 	make -C mlx/
-	$(CC) $^ -o $@ $(LDFLAGS) $(LDLIBS) 
+	$(CC) $^ -o $@ $(LDFLAGS) $(LDLIBS)
 
 $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c
 	@mkdir $(OBJ_PATH) 2> /dev/null || true

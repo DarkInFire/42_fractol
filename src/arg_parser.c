@@ -29,8 +29,10 @@ static int		get_fractal_type(t_args *args, char *fractal)
 		args->tmp_window->type = 3;
 	else if (ft_strcmp(fractal, "sierpinski_carpet") == 0)
 		args->tmp_window->type = 4;
-	else if (ft_strcmp(fractal, "bouddhabrot") == 0)
+	else if (ft_strcmp(fractal, "dragon") == 0)
 		args->tmp_window->type = 5;
+	else if (ft_strcmp(fractal, "oil") == 0)
+		args->tmp_window->type = 6;
 	else if (ft_strcmp(fractal, "random") == 0)
 		args->tmp_window->type = rand() % 5 + 1;
 	else
