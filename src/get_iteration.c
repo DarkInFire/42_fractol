@@ -19,9 +19,7 @@ static int	get_i_from_base_fractal(t_window *window, t_pos *pos)
 	t_comp	c;
 	t_comp	tmp;
 
-	if (window->type == 1)
-		f_julia(window, pos, &z, &c);
-	else if (window->type == 3)
+	if (window->type == 3)
 		f_douady(window, pos, &z, &c);
 	i = -1;
 	while (++i < window->it && (z.x * z.x + z.y * z.y) < 4)
@@ -35,8 +33,10 @@ static int	get_i_from_base_fractal(t_window *window, t_pos *pos)
 
 int			fol_get_iteration(t_window *window, t_pos *pos)
 {
-	if (window->type == 1 || window->type == 3)
+	if (window->type == 3)
 		return (get_i_from_base_fractal(window, pos));
+	else if (window->type == 1)
+		return (f_julia(window, pos));
 	else if (window->type == 2)
 		return (f_mandelbrot(window, pos));
 	else if (window->type == 4)
