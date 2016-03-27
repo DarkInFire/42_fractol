@@ -15,7 +15,6 @@
 #include <stdlib.h>
 #include <sys/stat.h>
 #include <fcntl.h>
-#include <stdio.h>
 
 int		fol_show_help(t_args *args)
 {
