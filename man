@@ -51,7 +51,7 @@ FRACTAL NAVIGATION
 	F		Increase the window width.
 	G		Decrease the window width.
 
-	NUM_MINUS	Increase by 1 the amout of iterations.
+	NUM_MINUS	Increase by 1 the amount of iterations.
 	NUM_PLUS	Decrease by 1 the amount of iterations.
 
 	L		Lock the Julia parameter.
