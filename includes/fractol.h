@@ -91,12 +91,6 @@ typedef struct		s_args
 	t_window		*tmp_window;
 }					t_args;
 
-typedef struct		s_comp
-{
-	float			x;
-	float			y;
-}					t_comp;
-
 int					fractol(t_args *args);
 void				fol_putusage(char *s);
 int					fol_show_help(t_args *args);
