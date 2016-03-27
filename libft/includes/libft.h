@@ -48,6 +48,12 @@ typedef struct		s_fd
 	struct s_fd		*next;
 }					t_fd;
 
+typedef struct		s_complex
+{
+	float			x;
+	float			y;
+}					t_complex;
+
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
 void				*ft_memcpy(void *dst, const void *src, size_t n);
