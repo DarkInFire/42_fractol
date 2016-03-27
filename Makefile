@@ -26,7 +26,7 @@ SRC_NAME = main.c \
 		   f_sierpinski_carpet.c \
 		   f_dragon.c \
 		   f_oil.c \
-		   f_julia2.c \
+		   f_poulpe.c \
 		   zoom_in.c \
 		   zoom_out.c \
 		   init_hooks.c \

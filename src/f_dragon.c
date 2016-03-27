@@ -8,13 +8,13 @@ int		f_dragon(t_window *window, t_pos *pos)
 	t_comp	c;
 	float	x;
 
-	z.x = (((pos->x + window->offset->x) / window->zoom / window->size->x) *
+	c.x = (((pos->x + window->offset->x) / window->zoom / window->size->x) *
 		4 - 2);
-	z.y = (((pos->y + window->offset->y) / window->zoom / window->size->y) *
+	c.y = (((pos->y + window->offset->y) / window->zoom / window->size->y) *
 		4 - 2);
-	c.x = ((float)window->mouse_cursor->x / (float)window->size->x) *
+	z.x = -0.0984651 + ((float)window->mouse_cursor->x / (float)window->size->x) *
 		2.0 - 1.0;
-	c.y = ((float)window->mouse_cursor->y / (float)window->size->y) *
+	z.y = -0.45186 + ((float)window->mouse_cursor->y / (float)window->size->y) *
 		2.0 - 1.0;
 	i = -1;
 	while (++i < window->it && (z.x * z.x + z.y * z.y) < 4)

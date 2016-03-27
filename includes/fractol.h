@@ -160,7 +160,7 @@ void				fol_fill_image(t_window *window);
 ** parameters
 */
 int					f_julia(t_window *window, t_pos *pos);
-int					f_julia2(t_window *window, t_pos *pos);
+int					f_poulpe(t_window *window, t_pos *pos);
 int					f_mandelbrot(t_window *window, t_pos *pos);
 int					f_douady(t_window *window, t_pos *pos);
 int					f_sierpinski_carpet(t_window *window, t_pos *pos);

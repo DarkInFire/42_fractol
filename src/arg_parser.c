@@ -33,7 +33,7 @@ static int		get_fractal_type(t_args *args, char *fractal)
 		args->tmp_window->type = 5;
 	else if (ft_strcmp(fractal, "oil") == 0)
 		args->tmp_window->type = 6;
-	else if (ft_strcmp(fractal, "julia2") == 0)
+	else if (ft_strcmp(fractal, "poulpe") == 0)
 		args->tmp_window->type = 7;
 	else if (ft_strcmp(fractal, "random") == 0)
 		args->tmp_window->type = rand() % 7 + 1;

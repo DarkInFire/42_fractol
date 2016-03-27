@@ -27,6 +27,6 @@ int			fol_get_iteration(t_window *window, t_pos *pos)
 	else if (window->type == 6)
 		return (f_oil(window, pos));
 	else if (window->type == 7)
-		return (f_julia2(window, pos));
+		return (f_poulpe(window, pos));
 	return (0);
 }
