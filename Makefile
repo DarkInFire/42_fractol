@@ -6,7 +6,7 @@
 #    By: jrouzier <jrouzier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/02/23 13:02:44 by jrouzier          #+#    #+#              #
-#    Updated: 2016/03/24 18:14:21 by jrouzier         ###   ########.fr        #
+#    Updated: 2016/03/28 15:43:49 by jrouzier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ SRC_NAME = main.c \
 		   f_dragon.c \
 		   f_oil.c \
 		   f_poulpe.c \
+		   f_smile.c \
 		   zoom_in.c \
 		   zoom_out.c \
 		   init_hooks.c \
@@ -54,8 +55,8 @@ SRC_NAME = main.c \
 		   hook_iteration_modify.c
 
 LDFLAGS = -Llibft/ -Lmlx/ -L/usr/X11R6/lib
-LDLIBS = -lft -lmlx -lm
-LDLIBS += -lX11 -lXext
+LDLIBS = -lft -lmlx -lm -lX11
+LDLIBS += -framework AppKit -framework OpenGL
 
 CC = clang
 CFLAGS = -Werror -Wall -Wextra -O3
