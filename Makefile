@@ -24,7 +24,7 @@ SRC_NAME = main.c \
 		   f_julia.c \
 		   f_mandelbrot.c \
 		   f_sierpinski_carpet.c \
-		   f_dragon.c \
+		   f_eye.c \
 		   f_oil.c \
 		   f_poulpe.c \
 		   f_smile.c \

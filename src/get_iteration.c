@@ -23,7 +23,7 @@ int			fol_get_iteration(t_window *window, t_pos *pos)
 	else if (window->type == 4)
 		return (f_sierpinski_carpet(window, pos));
 	else if (window->type == 5)
-		return (f_dragon(window, pos));
+		return (f_eye(window, pos));
 	else if (window->type == 6)
 		return (f_oil(window, pos));
 	else if (window->type == 7)

@@ -27,7 +27,7 @@ FRACTALS
 	sierpinski_carpet
 	poulpe
 	oil
-	dragon
+	eye
 	smile
 
 	random

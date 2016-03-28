@@ -165,7 +165,7 @@ int					f_poulpe(t_window *window, t_pos *pos);
 int					f_mandelbrot(t_window *window, t_pos *pos);
 int					f_douady(t_window *window, t_pos *pos);
 int					f_sierpinski_carpet(t_window *window, t_pos *pos);
-int					f_dragon(t_window *window, t_pos *pos);
+int					f_eye(t_window *window, t_pos *pos);
 int					f_oil(t_window *window, t_pos *pos);
 
 /*
