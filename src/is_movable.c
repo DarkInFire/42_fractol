@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mousecursor_hook.c                                 :+:      :+:    :+:   */
+/*   is_movable.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jrouzier <jrouzier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/03/21 14:07:31 by jrouzier          #+#    #+#             */
-/*   Updated: 2016/03/21 14:08:35 by jrouzier         ###   ########.fr       */
+/*   Created: 2016/03/28 16:00:39 by jrouzier          #+#    #+#             */
+/*   Updated: 2016/03/28 16:00:46 by jrouzier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fractol.h"
-
-int		fol_mousecursor_hook(int x, int y, t_window *window)
+int		fol_is_movable(int fractal)
 {
-	if (!(window->lock_mouse))
-		ft_setpos(window->mouse_cursor, x, y, 0);
-	if ((x % 5 == 0 || y % 5 == 0) && fol_is_movable(window->type))
-		fol_reset_display(window);
-	return (1);
+	if (fractal == 1 || fractal == 7 || fractal == 5 || fractal == 6
+		|| fractal == 8)
+		return (1);
+	return (0);
 }

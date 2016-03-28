@@ -143,6 +143,7 @@ int					fol_expose_hook(t_window *window);
 */
 int					hook_window_size_modify(t_window *window, int direction);
 int					hook_iteration_modify(t_window *window, int keycode);
+int					fol_is_movable(int fractal);
 
 /*
 ** Display functions

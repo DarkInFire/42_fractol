@@ -20,6 +20,7 @@ SRC_NAME = main.c \
 		   getcolor.c \
 		   get_iteration.c \
 		   fill_image.c \
+		   is_movable.c \
 		   f_douady.c \
 		   f_julia.c \
 		   f_mandelbrot.c \
