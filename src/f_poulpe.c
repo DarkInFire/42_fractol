@@ -1,13 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   f_poulpe.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jrouzier <jrouzier@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/03/28 15:52:01 by jrouzier          #+#    #+#             */
+/*   Updated: 2016/03/28 15:53:09 by jrouzier         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "fractol.h"
 #include <math.h>
 
 static int	calc_it(t_window *window, t_complex *z, t_complex *c)
 {
-	int			i;
-	double		x;
-	double 		s;
-	double 		d;
-	double 		u;
+	int		i;
+	double	x;
+	double	s;
+	double	d;
+	double	u;
 
 	i = -1;
 	while (++i < window->it && (z->x * z->x + z->y * z->y) < 4)
@@ -17,14 +29,14 @@ static int	calc_it(t_window *window, t_complex *z, t_complex *c)
 		z->y = 3 * x * x * z->y - z->y * z->y * z->y;
 		s = sin(z->y);
 		d = cos(z->y);
-  		u = exp(z->x);
-  		z->x = u * d + c->x;
-  		z->y = u * s + c->y;
+		u = exp(z->x);
+		z->x = u * d + c->x;
+		z->y = u * s + c->y;
 	}
 	return (i);
 }
 
-int		f_poulpe(t_window *window, t_pos *pos)
+int			f_poulpe(t_window *window, t_pos *pos)
 {
 	t_complex	z;
 	t_complex	c;
