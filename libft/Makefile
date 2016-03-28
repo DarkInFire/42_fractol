@@ -6,7 +6,7 @@
 #    By: jrouzier <jrouzier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/06 19:23:02 by jrouzier          #+#    #+#              #
-#    Updated: 2016/03/22 10:35:45 by jrouzier         ###   ########.fr        #
+#    Updated: 2016/03/28 16:09:52 by jrouzier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ SRC_NAME = ft_memchr.c ft_putstr.c ft_strjoin.c ft_strsplit.c ft_memcmp.c \
 	ft_putdebug_fd.c ft_putdebug.c
 
 CC = clang
-CFLAGS = -Werror -Wall -Wextra -02
+CFLAGS = -Werror -Wall -Wextra -O2
 SRC_PATH = src
 CPPFLAGS = -I./includes
 OBJ_PATH = obj
