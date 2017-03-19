@@ -15,8 +15,9 @@
 
 void	fol_reset_display(t_window *window)
 {
-	mlx_destroy_image(window->mlx, window->img);
-	fol_display(window);
+	fol_fill_image(window);
+	mlx_put_image_to_window(window->mlx, window->window, window->img,
+		0, 0);
 }
 
 void	fol_display(t_window *window)

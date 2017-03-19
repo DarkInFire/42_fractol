@@ -16,7 +16,8 @@ int		fol_mousecursor_hook(int x, int y, t_window *window)
 {
 	if (!(window->lock_mouse))
 		ft_setpos(window->mouse_cursor, x, y, 0);
-	if ((x % 5 == 0 || y % 5 == 0) && fol_is_movable(window->type))
+	if ((x % 5 == 0 || y % 5 == 0) && fol_is_movable(window->type)){
 		fol_reset_display(window);
+	}
 	return (1);
 }
